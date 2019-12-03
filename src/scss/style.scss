@@ -1,0 +1,40 @@
+@import "reset";
+@import "vars";
+@import "mixins";
+@import "fonts";
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+// Reset
+/* *, *:after, *:before{ box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0px; }
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+} */
+
+//Styles
+
+html {
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+}
+
+body {
+  background-color: $bg-color-primary;
+  font-family: $lora;
+}
