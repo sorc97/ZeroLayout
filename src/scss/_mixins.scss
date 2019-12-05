@@ -14,3 +14,13 @@
   width: $width;
   height: $height;
 }
+
+@mixin font($font, $size) {
+  font-family: $font, 'sans-serif';
+  font-size: $size;
+}
+
+@mixin alignElements($x, $y: $x) {
+  align-items: $x;
+  justify-items: $y;
+}

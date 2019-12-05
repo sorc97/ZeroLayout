@@ -12,4 +12,15 @@ $phoneWidth: 480px;
 $smPhoneWidth: 320px; 
 
 //Colors
-$bg-color-primary: pink;
+$bg-color-primary: #f2f2f2;
+$bg-color-secondary: #ccc;
+$footer-bg-color: #fff;
+$nav-bg: #252525;
+$dark-text-color: #000;
+$light-text-color: #fff;
+$active-color: #fb7c56;
+
+
+//Grid props
+$content-container: [left-gutter] 1fr [content] minmax(auto, $conteinerSize) [right-gutter] 1fr;
+$responsive-content-container: [left-gutter] 20px [content] auto [right-gutter] 20px;

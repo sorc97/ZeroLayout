@@ -1,0 +1,15 @@
+@media screen and (max-width: $desktopWidth) {
+  .container {
+    grid-template-columns: $responsive-content-container
+  }
+
+  .footer {
+    grid-template-rows: [caption] 1fr [galery] 3fr [icons] 1fr [copyright] 70px;
+  }
+
+  .galery {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 20px;
+  }
+}
