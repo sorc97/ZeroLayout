@@ -1,3 +1,5 @@
+@import 'vars';
+
 @function rem($pixels, $context: $mainFontSize) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
@@ -21,6 +23,11 @@
 }
 
 @mixin alignElements($x, $y: $x) {
-  align-items: $x;
-  justify-items: $y;
+  align-items: $y;
+  justify-items: $x;
+}
+
+@mixin alignSelf($x, $y: $x) {
+  align-self: $y;
+  justify-self: $x;
 }

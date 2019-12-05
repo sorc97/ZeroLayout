@@ -33,12 +33,12 @@ ul, li {
 
 html {
   font-size: $mainFontSize;
-  line-height: $mainLineHeight;
 }
 
 body {
   background-color: $bg-color-primary;
   font-family: $regular-font;
+  line-height: $mainLineHeight;
   min-height: 100vh;
   display: grid;
   grid-template-rows: [header] 310px [content] auto [footer] minmax(550px, auto);
@@ -46,6 +46,10 @@ body {
 
 a {
   display: inline-block;
+}
+
+.selected-text {
+  color: $active-color;
 }
 
 // HEADER
@@ -114,9 +118,269 @@ a {
   @include alignElements(center);
 }
 
-.content {
+
+
+
+
+
+
+// CONTENT
+// Popular articles
+
+.articles {
   grid-row: content;
 }
+
+.clothes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.article-card {
+  display: grid;
+  grid-template-rows: [img] 3fr [about] 1fr;
+  color: $dark-text-color;
+
+  &:hover &__about { 
+    background-color: $active-color;
+    color: $light-text-color;
+    
+    .stick {
+      background-color: $light-text-color;
+    }
+
+    &::before {
+      background-color: $active-color;
+    }
+  }
+
+  &__img {
+    display: block;
+    @include size(100%, 410px);
+
+    img {
+      @include size(100%);
+      object-fit: cover;
+    }
+  }
+
+  &__about {
+    position: relative;
+    background-color: $light-bg-color;
+    display: grid;
+    justify-content: center;
+    align-content: space-evenly;
+    text-align: center;
+    border-right: 1px solid #e3e3e3;
+    transition: all .3s ease;
+
+    &:last-child{
+      border-right: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -7px;
+      left: calc(50% - 7px);
+      @include size(15px, 15px);
+      background-color: $light-bg-color;
+      transform: rotate(45deg);
+      transition: all .3s ease;
+    }
+  }
+
+  &__caption {
+    @include font($caption-font, rem(18));
+
+    &::before {
+      content: '';
+      @include size(125px, 2px);
+      background-color: $active-color;
+    }
+  }
+
+  &__author {
+    font-size: rem(14);
+    font-style: italic;
+  }
+}
+
+.stick {
+  @include size(125px, 2px);
+  background-color: $active-color;
+  margin: auto;
+}
+
+
+
+
+// Posts
+
+.posts {
+
+  &__inner {
+    grid-column: content;
+    display: grid;
+    grid-template-columns: [feed] 2fr [sidebar] 1fr;
+    column-gap: 30px;
+    padding: 30px 0px;
+  }
+
+  &__navigation {
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    
+    a {
+      color: $dark-text-color;
+      padding: 15px 0px;
+      transition: all .3s ease;
+      
+      &:hover{
+        color: $active-color;
+      }
+    }
+  }
+}
+
+.feed {
+  // background-color: coral;
+  // height: 100px;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, auto);
+  grid-gap: 25px;
+}
+
+.post-card {
+  background-color: $light-bg-color;
+  display: grid;
+  grid-template-rows: [img] 2fr [about] 1.1fr [icons] 100px; 
+  @include font($regular-font, 14px);
+
+  &__img {
+    width: 100%;
+
+    img {
+      width: inherit;
+    }
+  }
+
+  &__about {
+    display: grid;
+    grid-template-rows: [title] 1.5fr [info] 1fr [description] 2fr;
+    @include alignElements(center);
+    padding: 0px 20px;
+    // row-gap: 10px;
+  }
+
+  &__title {
+    @include font($caption-font, rem(24));
+
+    a {
+      color: $dark-text-color;
+    }
+  }
+
+  &__info {
+    font-style: italic;
+  }
+
+  &__author-img {
+    img {
+      @include size(40px);
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0px 10px;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    padding: 0px 30px;
+    line-height: 1.3rem;
+  }
+
+  &__icons {
+    justify-content: center;
+    align-items: center;
+    @include size(100%);
+    border-top: 1px dashed $post-border-color;
+  }
+}
+
+.sidebar {
+  position: sticky;
+  top: 30px;
+  row-gap: 30px;
+  // background-color: lawngreen;
+  height: auto;
+}
+
+.about {
+  text-align: center;
+  display: grid;
+  background-color: $light-bg-color;
+  row-gap: 25px;
+  // grid-template-columns: [caption] 1fr [img] 4fr [description] 2fr;
+  padding: 20px;
+
+  &__img {
+    width: 100%;
+    
+    img {
+      width: inherit;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.3rem;
+  }
+}
+
+.subscribe {
+  background-color: $active-color;
+  display: grid;
+  row-gap: 20px;
+  padding: 25px 20px;
+  color: $light-text-color;
+  font-size: 16px;
+
+  &__form {
+    display: grid;
+    row-gap: 10px;
+  }
+
+  &__email-field {
+    @include font($regular-font , 16px);
+    padding: 10px;
+  }
+
+  &__button {
+    font-family: $caption-font;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px;
+    background-color: $dark-text-color;
+    color: $light-text-color;
+  }
+}
+
+.caption {
+  position: relative;
+  display: block;
+  margin: auto;
+  padding: 0px 10px 10px 10px;
+  border-bottom: 3px solid $dark-text-color;
+  @include font($caption-font, 16px);
+}
+
+
 
 // FOOTER
 
@@ -124,7 +388,7 @@ a {
   @include font($caption-font, 14px);
   font-weight: bold;
   text-transform: uppercase;
-  background-color: $footer-bg-color;
+  background-color: $light-bg-color;
   display: grid;
   grid-template-rows: [caption] 1fr [galery] 2fr [icons] 1fr [copyright] 70px;
   @include alignElements(center);
@@ -196,7 +460,7 @@ a {
 
 .icons {
   display: flex;
-
+  
   &__item {
     position: relative;
     display: flex;
