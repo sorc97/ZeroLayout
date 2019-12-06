@@ -16,11 +16,11 @@ module.exports = {
   },
   
   entry: {
-    bundle: PATHS.src
+    app: PATHS.src
   },
   output: {
     path: PATHS.dist,
-    filename: `${PATHS.assets}js/[name].js`,
+    filename: `${PATHS.assets}js/[name].bundle.js`,
     publicPath: '/'
   },
   module: {
@@ -79,6 +79,11 @@ module.exports = {
       hash: false,
       template: `${PATHS.src}/index.html`,
       filename: './index.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/singlePost.html`,
+      filename: 'singlePost.html'
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` }

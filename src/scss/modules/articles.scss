@@ -1,5 +1,5 @@
 
-.articles {
+.content {
   grid-row: content;
 }
 
@@ -186,6 +186,7 @@
 
 .post-title {
   font-family: $caption-font;
+  font-weight: 500;
 
   a {
     color: $dark-text-color;
@@ -284,7 +285,6 @@
   }
 
   &__title {
-    font-weight: 500;
     font-size: rem(18);
   }
 }
