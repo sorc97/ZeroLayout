@@ -133,6 +133,15 @@
   a {
     color: $medium-text-color;
   }
+
+  &__author-img {
+    img {
+      @include size(40px);
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0px 10px;
+    }
+  }
 }
 
 .post-card {
@@ -159,15 +168,6 @@
 
   &__title {
     font-size: rem(24);
-  }
-
-  &__author-img {
-    img {
-      @include size(40px);
-      object-fit: cover;
-      border-radius: 50%;
-      margin: 0px 10px;
-    }
   }
 
   &__description {

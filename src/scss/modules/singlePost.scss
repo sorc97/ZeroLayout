@@ -12,3 +12,169 @@
     @include font($caption-font, rem(36));
   }
 }
+
+.single-post {
+  background-color: $light-bg-color;
+  
+  &__body {
+    padding: 30px;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__img {
+    width: 100%;
+
+    img {
+      width: inherit;
+    }
+  }
+
+  &__info {
+    padding: 25px 0px;
+  }
+
+  &__article-text {
+    font-size: rem(16);
+  }
+
+  &__icons {
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px dashed $post-border-color;
+  }
+}
+
+.article-text {
+  &__paragraph {
+    margin: 30px 0px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  &__quote {
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    column-gap: 20px;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    font-style: italic;
+    background-color: $bg-color-primary;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 4px;
+      background-color: $active-color;
+    }
+  }
+
+  &__caption {
+    @include font($caption-font, rem(20));
+    font-weight: 500;
+  }
+}
+
+.author {
+  background-color: $light-bg-color;
+  display: grid;
+  grid-template-areas: 'caption caption' 'img about';
+  gap: 25px;
+  padding: 20px 30px 30px 30px;
+
+  &__caption {
+    grid-area: caption;
+    max-width: 100px;
+  }
+
+  &__img {
+    grid-area: img;
+  }
+
+  &__about {
+    grid-area: about;
+    align-self: center;
+  }
+
+  &__nick {
+    @include font($caption-font, rem(16));
+    font-weight: 700;
+  }
+
+  &__description {
+    color: $medium-text-color;
+    font-size: 16px;
+  }
+
+}
+
+.comments {
+  display: grid;
+  background-color: $light-bg-color;
+  padding: 20px 30px 30px 30px;
+}
+
+.comments-item {
+  display: grid;
+  grid-template-columns: [img] minmax(auto, 75px) [about] 1fr;
+  grid-template-rows: [info] auto [comment] 1fr;
+  gap: 10px 20px;
+  border-bottom: 1px dashed $post-border-color;
+  padding: 40px 0px;
+
+  &__img {
+    grid-column: img;
+    grid-row: span 2;
+    width: 100%;
+
+    img{
+      width: inherit;
+    }
+  }
+
+  &__info {
+    position: relative;
+    grid-column: about;
+    grid-row: info;
+  }
+
+  &__nick {
+    display: inline-block;
+    @include font($caption-font, rem(18));
+    font-weight: 500;
+
+    a {
+      color: $dark-text-color;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    font-style: italic;
+    color: $medium-text-color;
+  }
+
+  &__reply {
+    position: absolute;
+    right: 0px;
+    @include font($caption-font, 12px);
+    color: $active-color;
+  }
+
+  &__comment-text {
+    font-size: rem(16);
+    color: $medium-text-color;
+  }
+}
+
+/* .quote{
+  width: 100%;
+  height: 4px;
+  background-color: $active-color;
+} */
