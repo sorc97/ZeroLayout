@@ -1,0 +1,58 @@
+
+.header {
+  grid-row: header;
+  display: grid;
+  grid-template-rows: [nav] 1fr [logo] 255px;
+}
+
+.menu {
+  display: inline-block;
+
+  &__item {
+    display: inline-block;
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__link {
+    font-family: $caption-font;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column: content;
+  align-items: center;
+
+  &__container {
+    grid-row: nav;
+    background-color: $nav-bg;
+    justify-self: center;
+
+  }
+  
+  &__icons {
+    justify-self: end;
+  }
+
+  &__social-icon {
+    margin-right: 20px;
+    color: $light-text-color;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.logo {
+  grid-row: logo;
+  display: grid;
+  @include alignElements(center);
+}
