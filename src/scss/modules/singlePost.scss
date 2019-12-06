@@ -1,0 +1,14 @@
+.page-caption {
+  height: 250px;
+  background: url('/assets/img/background.jpeg') no-repeat center /cover;
+  display: grid;
+  @include alignElements(center);
+
+  &__title {
+    display: block;
+    border-bottom: 3px solid $active-color;
+    padding: 20px;
+    color: $light-text-color;
+    @include font($caption-font, rem(36));
+  }
+}
