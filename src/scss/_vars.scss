@@ -18,6 +18,7 @@ $light-bg-color: #fff;
 $nav-bg: #252525;
 $dark-text-color: #000;
 $light-text-color: #fff;
+$medium-text-color: #9a9a9a;
 $active-color: #fb7c56;
 $post-border-color: #d4d4d4;
 
@@ -25,3 +26,6 @@ $post-border-color: #d4d4d4;
 //Grid props
 $content-container: [left-gutter] 1fr [content] minmax(auto, $conteinerSize) [right-gutter] 1fr;
 $responsive-content-container: [left-gutter] 20px [content] auto [right-gutter] 20px;
+
+//Indents
+$sidebar-padding: 1.5rem;
