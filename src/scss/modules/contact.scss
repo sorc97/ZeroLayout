@@ -1,0 +1,79 @@
+.contact {  
+  &__inner {
+    display: grid;
+    row-gap: 30px;
+    grid-column: content;
+    padding: 50px 0px;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(200px, 290px);
+    background-color: $light-bg-color;
+  }
+
+  &__map {
+    width: 100%;
+    background-color: $light-bg-color;
+    padding: $section-padding;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.contact-card {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 20px;
+  align-items: center;
+  @include font($caption-font, 16px);
+  font-weight: 700;
+  border-right: 1px solid $bg-color-secondary;
+  padding: $section-padding;
+
+  &:last-child {
+    border: none;
+  }
+
+  &__caption {
+    grid-column: span 2;
+    align-self: center;
+  }
+
+  &__icon {
+    background-color: $active-color;
+    @include size(100px);
+    display: grid;
+    @include alignElements(center);
+    
+    i {
+      color: $light-text-color;
+      font-size: rem(36);
+    }
+  }
+}
+
+.feedback {
+  background-color: $light-bg-color;
+  padding: $section-padding;
+  display: grid;
+  grid-template-columns: minmax(auto, 700px);
+  // grid-template-rows: auto 270px;
+  justify-content: center;
+  row-gap: 35px;
+
+  &__form {
+    min-height: 270px;
+    grid-template-areas: 'name comment'
+                        'email comment' 
+                        'phone comment' 
+                        'submit comment';
+    margin-bottom: 40px;
+  }
+}

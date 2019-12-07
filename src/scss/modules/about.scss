@@ -1,0 +1,68 @@
+.about-author {
+  display: grid;
+  padding: $feed-padding;
+  grid-template-columns: [left-gutter] 1fr [content] minmax(auto, $aboutContainer) [right-gutter] 1fr;
+
+  &__card {
+    display: grid;
+    grid-template-rows: 5fr 3fr 1fr;
+    grid-column: content;
+    max-width: $aboutContainer;
+    width: 100%;
+    justify-self: center;
+    background-color: $light-bg-color;
+  }
+
+  &__img {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    display: grid;
+    @include alignElements(center);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      @include size(100%);
+      background: url('/assets/img/background.jpeg') no-repeat top /cover;
+      filter: blur(3px);
+      z-index: 0;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    /* max-width: 215px;
+    max-width: 215px; */
+    /* width: 190px;
+    height: 190px; */
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 3px solid $active-color;
+    z-index: 2;
+  }
+
+  &__caption {
+    align-self: start;
+  }
+
+  &__text {
+    display: grid;
+    padding: 0px 10%;
+  }
+
+  &__description {
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+  }
+
+  &__icons {
+    justify-content: center;
+    align-items: center;
+    border-top: 1px dashed $medium-text-color;
+  }
+}

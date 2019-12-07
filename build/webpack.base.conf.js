@@ -85,6 +85,16 @@ module.exports = {
       template: `${PATHS.src}/singlePost.html`,
       filename: 'singlePost.html'
     }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/contact.html`,
+      filename: 'contact.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/about.html`,
+      filename: 'about.html'
+    }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` }
     ])
