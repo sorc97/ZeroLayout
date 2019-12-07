@@ -118,15 +118,28 @@
   display: grid;
   background-color: $light-bg-color;
   padding: 20px 30px 30px 30px;
+
+  &__item {
+    border-bottom: 1px dashed $post-border-color;
+    padding: 40px 0px;
+  }
+
+  &__list_subcomments {
+    grid-row: subcomments;
+    grid-column: about;
+  }
+
+  &__item_subcomment {
+    border-bottom: none;
+    padding-top: 20px;
+  }
 }
 
 .comments-item {
   display: grid;
   grid-template-columns: [img] minmax(auto, 75px) [about] 1fr;
-  grid-template-rows: [info] auto [comment] 1fr;
+  grid-template-rows: [info] auto [comment] 1fr [subcomments] auto;
   gap: 10px 20px;
-  border-bottom: 1px dashed $post-border-color;
-  padding: 40px 0px;
 
   &__img {
     grid-column: img;
@@ -148,6 +161,7 @@
     display: inline-block;
     @include font($caption-font, rem(18));
     font-weight: 500;
+    margin-right: 5px;
 
     a {
       color: $dark-text-color;
@@ -165,6 +179,12 @@
     right: 0px;
     @include font($caption-font, 12px);
     color: $active-color;
+    font-weight: 500;
+
+    i {
+      color: $dark-text-color;
+      margin-left: 10px;
+    }
   }
 
   &__comment-text {
@@ -173,8 +193,85 @@
   }
 }
 
-/* .quote{
-  width: 100%;
-  height: 4px;
-  background-color: $active-color;
-} */
+.leave-comment {
+  &__title {
+    margin: 25px 0px;
+    font-weight: 700;
+  }
+
+  &__form {
+    height: 200px;
+    grid-template-areas: 'name comment'
+                        'email comment' 
+                        'submit comment';
+
+  }
+}
+
+.message-form {
+  display: grid;
+  gap: 25px;
+  color: $medium-text-color;
+
+  *{
+    @include font($regular-font, rem(16px));
+    border: 1px solid $input-border-color;
+  }
+
+  &__email {
+    grid-area: email;
+    padding: 0px 10px;
+  }
+
+  &__name {
+    grid-area: name;
+    padding: 0px 10px;
+  }
+
+  &__btn {
+    grid-area: submit;
+    @include font($caption-font, rem(14px));
+    background-color: $active-color;
+    color: $light-text-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+  }
+
+  &__comment {
+    grid-area: comment;
+    max-height: 100%;
+    padding: 15px;
+    resize: none;
+  }
+
+  &__phone {
+    grid-area: phone;
+  }
+}
+
+.related-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $light-bg-color;
+  padding: $feed-padding;
+  gap: 30px 25px;
+
+  &__caption {
+    grid-column: span 2;
+  }
+}
+
+.related-item {
+  text-align: center;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    margin-top: 20px;
+    color: $dark-text-color;
+  }
+}

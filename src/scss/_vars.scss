@@ -22,6 +22,7 @@ $medium-text-color: #9a9a9a;
 $active-color: #fb7c56;
 $post-border-color: #d4d4d4;
 $descriptions-color: #707070;
+$input-border-color: #bdc3c7;
 
 //Grid props
 $content-container: [left-gutter] 1fr [content] minmax(auto, $conteinerSize) [right-gutter] 1fr;
@@ -29,3 +30,4 @@ $responsive-content-container: [left-gutter] 20px [content] auto [right-gutter] 
 
 //Indents
 $sidebar-padding: 1.5rem;
+$feed-padding: 20px 30px 30px 30px;
