@@ -10,7 +10,7 @@
 
   &__item {
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 5%;
 
     &:last-child {
       margin-right: 0px;
@@ -55,4 +55,12 @@
   grid-row: logo;
   display: grid;
   @include alignElements(center);
+}
+
+.phone-menu {
+  cursor: pointer;
+  
+  i {
+    color: $light-text-color;
+  }
 }

@@ -9,6 +9,7 @@ $desktopWidth: 1200px;
 $smDesktopWidth: 980px;
 $tabletWidth: 768px;
 $phoneWidth: 480px;
+// $phoneWidth: 575px;
 $smPhoneWidth: 320px; 
 
 //Colors
@@ -30,5 +31,6 @@ $responsive-content-container: [left-gutter] 20px [content] auto [right-gutter] 
 
 //Indents
 $sidebar-padding: 1.5rem;
-$feed-padding: 20px 30px 30px 30px;
+// $feed-padding: 20px 30px 30px 30px;
+$feed-padding: 5%;
 $section-padding: 1.2rem;

@@ -118,7 +118,7 @@
 .comments {
   display: grid;
   background-color: $light-bg-color;
-  padding: 20px 30px 30px 30px;
+  padding: $feed-padding;
 
   &__item {
     border-bottom: 1px dashed $post-border-color;
@@ -138,9 +138,10 @@
 
 .comments-item {
   display: grid;
-  grid-template-columns: [img] minmax(auto, 75px) [about] 1fr;
+  grid-template-columns: [img] minmax(25px, 12%) [about] 1fr;
   grid-template-rows: [info] auto [comment] 1fr [subcomments] auto;
-  gap: 10px 20px;
+  // gap: 10px 20px;
+  gap: 10px 5%;
 
   &__img {
     grid-column: img;
@@ -170,7 +171,7 @@
   }
 
   &__date {
-    font-size: 14px;
+    font-size: rem(14);
     font-style: italic;
     color: $medium-text-color;
   }
@@ -189,7 +190,7 @@
   }
 
   &__comment-text {
-    font-size: rem(16);
+    font-size: rem(14);
     color: $medium-text-color;
   }
 }
@@ -201,7 +202,7 @@
   }
 
   &__form {
-    height: 200px;
+    min-height: 200px;
     grid-template-areas: 'name comment'
                         'email comment' 
                         'submit comment';
@@ -244,6 +245,7 @@
     max-height: 100%;
     padding: 15px;
     resize: none;
+    min-height: 100px;
   }
 
   &__phone {

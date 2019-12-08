@@ -1,5 +1,5 @@
 .footer {
-  @include font($caption-font, 14px);
+  @include font($caption-font, rem(14));
   font-weight: bold;
   text-transform: uppercase;
   background-color: $light-bg-color;
@@ -73,7 +73,7 @@
 
 .icons {
   display: flex;
-  font-size: 18px;
+  font-size: rem(18);
   
   &__item {
     position: relative;

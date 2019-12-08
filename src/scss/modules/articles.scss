@@ -126,29 +126,33 @@
 }
 
 .post-info {
+  display: grid;
+  grid-template-areas: 'date user';
+  align-items: center;
   font-style: italic;
-  @include font($regular-font, 14px);
-  color: $medium-text-color;
+  @include font($regular-font, rem(14));
 
-  a {
+  &__author-info {
+    grid-area: user;
     color: $medium-text-color;
   }
-
+  
   &__author-img {
-    img {
-      @include size(40px);
-      object-fit: cover;
-      border-radius: 50%;
-      margin: 0px 10px;
-    }
+    @include size(40px);
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0px 10px;
+  }
+
+  &__date {
+    grid-area: date;
   }
 }
 
 .post-card {
   background-color: $light-bg-color;
   display: grid;
-  grid-template-rows: [img] 2fr [about] 1.1fr [icons] 100px; 
-  @include font($regular-font, 14px);
+  @include font($regular-font, rem(14));
 
   &__img {
     width: 100%;
@@ -160,27 +164,32 @@
 
   &__about {
     display: grid;
-    grid-template-rows: [title] 1.5fr [info] 1fr [description] 2fr;
     @include alignElements(center);
-    padding: 0px 20px;
-    // row-gap: 10px;
+    padding: 5% 3% 7% 3%;
+    row-gap: 20px;
   }
 
   &__title {
     font-size: rem(24);
+    text-align: center;
   }
 
   &__description {
     text-align: center;
-    padding: 0px 30px;
-    line-height: 1.3rem;
+    // padding: 0px 30px;
+    // line-height: 1.3rem;
+    font-family: $regular-font;
   }
 
   &__icons {
     justify-content: center;
     align-items: center;
-    @include size(100%);
+    @include size(100%, 100px);
     border-top: 1px dashed $post-border-color;
+  }
+
+  &__info {
+
   }
 }
 
@@ -220,9 +229,8 @@
   }
 
   &__description {
-    font-size: 14px;
+    font-size: rem(14);
     font-style: italic;
-    line-height: 1.3rem;
   }
 }
 
@@ -286,6 +294,12 @@
 
   &__title {
     font-size: rem(18);
+  }
+
+  @media screen and (max-width: $desktopWidth) {
+    grid-template-rows: 2fr 1fr;
+    row-gap: 10px;
+    grid-template-columns: 1fr;
   }
 }
 

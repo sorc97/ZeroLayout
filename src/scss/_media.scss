@@ -1,15 +1,174 @@
+// DESKTOP
 @media screen and (max-width: $desktopWidth) {
+  html {
+    font-size: 17px;
+  }
+  
   .container {
     grid-template-columns: $responsive-content-container
   }
 
   .footer {
-    grid-template-rows: [caption] 1fr [galery] 3fr [icons] 1fr [copyright] 70px;
+    grid-template-rows: [caption] 1fr [galery] 4fr [icons] 1fr [copyright] 70px;
   }
 
   .galery {
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(2, auto);
     row-gap: 20px;
+  }
+}
+// SMALL DESKTOP
+@media screen and (max-width: $smDesktopWidth) {
+  html {
+    font-size: 16px;
+  }
+  
+  .contact {
+    &__info {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 200px);
+    }
+  }
+
+  .contact-card {
+    grid-template-columns: auto 1fr;
+    border: none;
+    grid-gap: 10%;
+  }
+  
+  .article-card {
+    
+    &__img {
+      height: auto;
+      grid-template-rows: [img] 2fr [about] 1fr;
+    }
+  }
+}
+
+// TABLET
+@media screen and (max-width: $tabletWidth) {
+  
+  .galery {
+    grid-template-columns: repeat(2, minmax(150px, 30%));
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+  }
+
+  footer {
+    &__galery {
+      padding: 0px;
+    }
+  }
+
+  .clothes {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .article-card {
+    grid-template-rows: [img] 2fr [about] 1.2fr;
+
+    &__img {
+      height: 250px;
+    }
+
+    &__about {
+      padding: 0px 10px;
+    }
+  }
+
+  .blog__inner {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .phone-menu {
+    display: inline-block;
+  }
+
+  .popular-posts {
+    &__item {
+      grid-template-rows: 1fr auto;
+    }
+  }
+
+  .feedback {
+
+    &__form {
+      grid-template-areas: "name" 
+                        "email"  
+                        "phone" 
+                        "comment" 
+                        "submit";
+    }
+  }
+
+  .leave-comment {
+
+    &__form {
+      grid-template-areas: "name" 
+                          "email"  
+                          "comment" 
+                          "submit";
+    }
+  }
+
+  .message-form {
+    * {
+      padding: 15px;
+    }
+
+    &__btn {
+      padding: 20px;
+    }
+  }
+}
+
+// PHONE
+@media screen and (max-width: $phoneWidth) {
+  html {
+    font-size: 15px;
+  }
+
+  .article-card {
+    grid-template-rows: [img] 2fr [about] 1.5fr;
+  }
+
+  .post-card {
+    &__icons {
+      height: 70px;
+    }
+
+    &__info {
+      justify-items: center;
+    }
+  }
+
+  .post-info {
+    grid-template-areas:
+        "date"
+        "user";
+    row-gap: 15px;
+  }
+
+  .contact-card {
+    &__icon {
+      @include size(70px);
+    }
+  }
+
+  .comments {
+
+    &__list {
+
+      &_subcomments {
+        grid-column: span 2;
+        margin-left: 20px;
+      }
+    }
   }
 }
