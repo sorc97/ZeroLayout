@@ -57,10 +57,12 @@
   @include alignElements(center);
 }
 
-.phone-menu {
+.burger-icon {
+  display: none;
   cursor: pointer;
-  
+
   i {
     color: $light-text-color;
+    font-size: 20px;
   }
 }

@@ -12,26 +12,36 @@
       <!-- Navigation -->
       <div class="container navigation__container">
         <div class="navigation">
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="#">Home pages</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Single post</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">About us</a></li>
-              </ul>
-            </nav>
+          <!-- Burger icon -->
+          <input id="toggler" type="checkbox" name="toggler" class="toggler" hidden>
+          <label for="toggler" class="burger-icon burger-icon_open">
+            <i class="fa fa-bars"></i>
+          </label>
+          <!-- Menu -->
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="index.html">Home pages</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Single post</a></li>
+              <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">About us</a></li>
+            </ul>
 
-            <div class="icons navigation__icons">
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </div>
+            <label for="toggler" class="burger-icon burger-icon_close" hidden>
+              <i class="fa fa-close"></i>
+            </label>
+          </nav>
+
+          <div class="icons navigation__icons">
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
         
       </div>
@@ -69,7 +79,7 @@
                   </a>
                 </h1>
 
-                <div class="single-post__info post-info">
+                <div class="single-post__info post-info post-info_column">
                   <span class="post-info__date">
                       <span class="selected-text">Posted on</span>  August 17, 2017 -
                       <span class="selected-text">by</span>
@@ -308,7 +318,9 @@
                       <a href='singlePost.html'>Being Atraveler in The World, Just Like A lion Without Beard</a>
                     </h1>
                     <p class="posts-item__info post-info">
-                      <span class="selected-text">Posted on</span> August 17, 2017
+                      <span class="post-info__date">
+                        <span class="selected-text">Posted on</span>  August 17, 2017
+                      </span>
                     </p>
                   </div>
                 </li>
@@ -322,7 +334,9 @@
                       <a href='singlePost.html'>Lorem Ipsum Dolor Sit met. Just a Dummy text for Content</a>
                     </h1>
                     <p class="posts-item__info post-info">
-                      <span class="selected-text">Posted on</span> August 17, 2017
+                      <span class="post-info__date">
+                        <span class="selected-text">Posted on</span>  August 17, 2017
+                      </span>
                     </p>
                   </div>
                 </li>
@@ -336,7 +350,9 @@
                       <a href='singlePost.html'>Just a Dummy text for Content, Lorem Ipsum</a>
                     </h1>
                     <p class="posts-item__info post-info">
-                      <span class="selected-text">Posted on</span> August 17, 2017
+                      <span class="post-info__date">
+                        <span class="selected-text">Posted on</span>  August 17, 2017
+                      </span>
                     </p>
                   </div>
                 </li>

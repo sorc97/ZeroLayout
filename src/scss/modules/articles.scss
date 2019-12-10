@@ -126,14 +126,16 @@
 }
 
 .post-info {
-  display: grid;
-  grid-template-areas: 'date user';
+  // display: grid;
+  // grid-template-areas: 'date user';
+  // align-items: center;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-style: italic;
   @include font($regular-font, rem(14));
 
   &__author-info {
-    grid-area: user;
     color: $medium-text-color;
   }
   
@@ -141,11 +143,8 @@
     @include size(40px);
     object-fit: cover;
     border-radius: 50%;
-    margin: 0px 10px;
-  }
-
-  &__date {
-    grid-area: date;
+    // margin: 0px 10px;
+    margin: 10px 5px;
   }
 }
 
@@ -196,6 +195,7 @@
 .post-title {
   font-family: $caption-font;
   font-weight: 500;
+  line-height: 1.6rem;
 
   a {
     color: $dark-text-color;
@@ -204,140 +204,4 @@
 
 // SIDEBAR
 
-.sidebar {
-  position: sticky;
-  top: 30px;
-  display: grid;
-  row-gap: 30px;
-  height: auto;
-}
 
-.about {
-  text-align: center;
-  display: grid;
-  background-color: $light-bg-color;
-  row-gap: 25px;
-  // grid-template-columns: [caption] 1fr [img] 4fr [description] 2fr;
-  padding: $sidebar-padding;
-
-  &__img {
-    width: 100%;
-    
-    img {
-      width: inherit;
-    }
-  }
-
-  &__description {
-    font-size: rem(14);
-    font-style: italic;
-  }
-}
-
-.subscribe {
-  background-color: $active-color;
-  display: grid;
-  row-gap: 20px;
-  padding: $sidebar-padding;
-  color: $light-text-color;
-  font-size: 16px;
-
-  &__form {
-    display: grid;
-    row-gap: 10px;
-  }
-
-  &__email-field {
-    @include font($regular-font , 16px);
-    padding: 10px;
-  }
-
-  &__button {
-    font-family: $caption-font;
-    text-transform: uppercase;
-    border: none;
-    padding: 10px;
-    background-color: $dark-text-color;
-    color: $light-text-color;
-  }
-}
-
-.popular-posts {
-  display: grid;
-  padding: $sidebar-padding;
-  row-gap: 25px;
-  background-color: $light-bg-color;
-
-  &__list {
-    display: grid;
-    row-gap: 20px;
-  }
-}
-
-.posts-item {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  column-gap: 15px;
-
-  &__about {
-    display: grid;
-    align-content: space-between;
-  }
-
-  &__img {
-    width: 100%;
-
-    img {
-      width: inherit;
-    }
-  }
-
-  &__title {
-    font-size: rem(18);
-  }
-
-  @media screen and (max-width: $desktopWidth) {
-    grid-template-rows: 2fr 1fr;
-    row-gap: 10px;
-    grid-template-columns: 1fr;
-  }
-}
-
-.category {
-  display: grid;
-  background-color: $light-bg-color;
-  padding: $sidebar-padding;
-  row-gap: 15px;
-
-  &__item {
-    font-size: rem(14);
-
-    a {
-      width: 100%;
-      color: $active-color;
-      font-style: italic;
-      padding: 10px 0px;
-
-      &:hover .category__icon {
-        transform: translateX(10px); 
-      }
-    }
-  }
-
-  &__icon {
-    color: $dark-text-color;
-    margin-right: 20px;
-    transition: all .3s ease;
-  }
-}
-
-.caption {
-  position: relative;
-  display: block;
-  margin: auto;
-  padding: 0px 5px 5px 5px;
-  border-bottom: 3px solid $dark-text-color;
-  @include font($caption-font, rem(14));
-  font-weight: bold;
-  text-transform: uppercase;
-}

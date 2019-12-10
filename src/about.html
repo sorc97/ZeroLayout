@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Single Post</title>
+  <title>About</title>
 </head>
 <body>
   <!-- Header -->
@@ -12,30 +12,40 @@
       <!-- Navigation -->
       <div class="container navigation__container">
         <div class="navigation">
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="index.html">Home pages</a></li>
-                <li class="menu__item"><a class="menu__link" href="singlePost.html">Single post</a></li>
-                <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
-                <li class="menu__item"><a class="menu__link" href="about.html">About us</a></li>
-              </ul>
-            </nav>
+            <!-- Burger icon -->
+          <input id="toggler" type="checkbox" name="toggler" class="toggler" hidden>
+          <label for="toggler" class="burger-icon burger-icon_open">
+            <i class="fa fa-bars"></i>
+          </label>
+          <!-- Menu -->
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="index.html">Home pages</a></li>
+              <li class="menu__item"><a class="menu__link" href="singlePost.html">Single post</a></li>
+              <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">About us</a></li>
+            </ul>
 
-            <div class="phone-menu" hidden>
-              <i class="fa fa-bars"></i>
-            </div>
+            <label for="toggler" class="burger-icon burger-icon_close" hidden>
+              <i class="fa fa-close"></i>
+            </label>
+          </nav>
 
-            <div class="icons navigation__icons">
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </div>
+          <div class="phone-menu" hidden>
+            <i class="fa fa-bars"></i>
+          </div>
+
+          <div class="icons navigation__icons">
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
         
       </div>

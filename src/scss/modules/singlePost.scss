@@ -18,7 +18,7 @@
   background-color: $light-bg-color;
   
   &__body {
-    padding: 30px;
+    padding: 4%;
   }
 
   &__title {
@@ -34,11 +34,11 @@
   }
 
   &__info {
-    padding: 25px 0px;
+    padding: 1.4rem 0;
   }
 
   &__article-text {
-    font-size: rem(16);
+    font-size: 14px;
   }
 
   &__icons {
@@ -51,7 +51,7 @@
 
 .article-text {
   &__paragraph {
-    margin: 30px 0px;
+    margin: 1.4rem 0px;
 
     &:first-child {
       margin: 0;
@@ -86,8 +86,10 @@
   background-color: $light-bg-color;
   display: grid;
   grid-template-areas: 'caption caption' 'img about';
+  // grid-template-areas: 'caption caption' 'img img' 'about about';
+  // justify-items: center;
   gap: 25px;
-  padding: 20px 30px 30px 30px;
+  padding: $feed-padding;
 
   &__caption {
     grid-area: caption;
@@ -110,7 +112,7 @@
 
   &__description {
     color: $medium-text-color;
-    font-size: 16px;
+    font-size: rem(14);
   }
 
 }
@@ -179,7 +181,7 @@
   &__reply {
     position: absolute;
     right: 0px;
-    @include font($caption-font, 12px);
+    @include font($caption-font, rem(12));
     color: $active-color;
     font-weight: 500;
 

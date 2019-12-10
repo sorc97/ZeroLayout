@@ -10,6 +10,7 @@
 @import './modules/singlePost.scss';
 @import './modules/contact.scss';
 @import './modules/about.scss';
+@import './modules/sidebar.scss';
 
 *,
 *:before,
@@ -62,6 +63,17 @@ a {
   width: 100%;
   display: grid;
   grid-template-columns: $content-container;
+}
+
+.caption {
+  position: relative;
+  display: block;
+  margin: auto;
+  padding: 0px 5px 5px 5px;
+  border-bottom: 3px solid $dark-text-color;
+  @include font($caption-font, rem(14));
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 
