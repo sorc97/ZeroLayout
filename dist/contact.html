@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Single Post</title>
+  <title>Contacts</title>
 <link href="/assets/css/style.css" rel="stylesheet"></head>
 <body>
   <!-- Header -->
@@ -12,26 +12,36 @@
       <!-- Navigation -->
       <div class="container navigation__container">
         <div class="navigation">
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="#">Home pages</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Single post</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">About us</a></li>
-              </ul>
-            </nav>
+            <!-- Burger icon -->
+          <input id="toggler" type="checkbox" name="toggler" class="toggler" hidden>
+          <label for="toggler" class="burger-icon burger-icon_open">
+            <i class="fa fa-bars"></i>
+          </label>
+          <!-- Menu -->
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="index.html">Home pages</a></li>
+              <li class="menu__item"><a class="menu__link" href="singlePost.html">Single post</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">About us</a></li>
+            </ul>
 
-            <div class="icons navigation__icons">
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </div>
+            <label for="toggler" class="burger-icon burger-icon_close" hidden>
+              <i class="fa fa-close"></i>
+            </label>
+          </nav>
+
+          <div class="icons navigation__icons">
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
         
       </div>
@@ -54,21 +64,44 @@
     <!-- Contact -->
     <section class='contact'>
       <div class="container contact__container">
-        <div class="contact__info">
-          <div class="contact-card">
-            <h2 class="caption contact-card__caption">Adress</h2>
-            <div class="contact-card__icon"><i class='fa fa-home'></i></div>
-            <h3 class="contact-card__text">4102 Ferguson Street, Hopkinton Massachusetts, 01748 USA</h3>
+        <div class="contact__inner">
+        <!-- Contact info -->
+          <div class="contact__info">
+            <div class="contact-card">
+              <h1 class="caption contact-card__caption">Address</h1>
+              <div class="contact-card__icon"><i class='fa fa-home'></i></div>
+              <h3 class="contact-card__text">4102 Ferguson Street, Hopkinton Massachusetts, 01748 USA</h3>
+            </div>
+            <div class="contact-card">
+              <h1 class="caption contact-card__caption">Phone</h1>
+              <div class="contact-card__icon"><i class='fa fa-home'></i></div>
+              <h3 class="contact-card__text">+62 813 2871 0504 <br> +62 813 2871 0504</h3>
+            </div>
+            <div class="contact-card">
+              <h1 class="caption contact-card__caption">Email</h1>
+              <div class="contact-card__icon"><i class='fa fa-home'></i></div>
+              <h3 class="contact-card__text">dwidrg@gmail.com</h3>
+            </div>
           </div>
-          <div class="contact-card">
-            <h2 class="caption contact-card__caption">Phone</h2>
-            <div class="contact-card__icon"><i class='fa fa-home'></i></div>
-            <h3 class="contact-card__text">+62 813 2871 0504 <br> +62 813 2871 0504</h3>
+
+          <div class="contact__map">
+            <!-- <div class="contact__map-img"> -->
+              <img src="assets/img/map.jpeg" alt="map image">
+            <!-- </div> -->
           </div>
-          <div class="contact-card">
-            <h2 class="caption contact-card__caption">Email</h2>
-            <div class="contact-card__icon"><i class='fa fa-home'></i></div>
-            <h3 class="contact-card__text">dwidrg@gmail.com</h3>
+
+          <div class="contact__feedback feedback">
+            <h1 class="feedback__caption caption">
+              Send us a message
+            </h1>
+
+            <form class="feedback__form message-form">
+              <input type="text" name="name" class="message-form__name" placeholder="Name">
+              <input type="email" name="email" class="message-form__email" placeholder="Your email">
+              <input type="tel" name="phone" class="message-form__phone" placeholder="Your phone">
+              <textarea name="comment" class="message-form__comment" placeholder="Message"></textarea>
+              <input type="submit" value='Send message' class="message-form__btn">
+            </form>
           </div>
         </div>
       </div>

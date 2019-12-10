@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Single Post</title>
+  <title>About</title>
 <link href="/assets/css/style.css" rel="stylesheet"></head>
 <body>
   <!-- Header -->
@@ -12,26 +12,40 @@
       <!-- Navigation -->
       <div class="container navigation__container">
         <div class="navigation">
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="#">Home pages</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Single post</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">About us</a></li>
-              </ul>
-            </nav>
+            <!-- Burger icon -->
+          <input id="toggler" type="checkbox" name="toggler" class="toggler" hidden>
+          <label for="toggler" class="burger-icon burger-icon_open">
+            <i class="fa fa-bars"></i>
+          </label>
+          <!-- Menu -->
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="index.html">Home pages</a></li>
+              <li class="menu__item"><a class="menu__link" href="singlePost.html">Single post</a></li>
+              <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">About us</a></li>
+            </ul>
 
-            <div class="icons navigation__icons">
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </div>
+            <label for="toggler" class="burger-icon burger-icon_close" hidden>
+              <i class="fa fa-close"></i>
+            </label>
+          </nav>
+
+          <div class="phone-menu" hidden>
+            <i class="fa fa-bars"></i>
+          </div>
+
+          <div class="icons navigation__icons">
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
         
       </div>
@@ -48,10 +62,32 @@
     <!-- Page Caption -->
     <section class="page-caption">
       <div class="page-caption__title">
-        Single Page
+        About Me
       </div>
     </section>
     
+    <section class="about-author">
+      <div class="about-author__card">
+        <div class="about-author__img">
+            <img src="assets/img/about1.jpeg" alt="about image">
+        </div>
+
+        <article class="about-author__text">
+          <h1 class="about-author__caption caption">Vladimir Bogi</h1>
+          <p class="about-author__description">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. 
+          </p>
+        </article>
+
+        <div class="icons about-author__icons">
+          <a href="#" class="icons__item"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="icons__item"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="icons__item"><i class="fa fa-whatsapp"></i></a>
+          <a href="#" class="icons__item"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="icons__item"><i class="fa fa-pinterest"></i></a>
+        </div>
+      </div>
+    </section>
     
   </main>
 

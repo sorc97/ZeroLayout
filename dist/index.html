@@ -12,26 +12,36 @@
       <!-- Navigation -->
       <div class="container navigation__container">
         <div class="navigation">
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="#">Home pages</a></li>
-                <li class="menu__item"><a class="menu__link" href="singlePost.html">Single post</a></li>
-                <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
-                <li class="menu__item"><a class="menu__link" href="about.html">About us</a></li>
-              </ul>
-            </nav>
+          <!-- Burger icon -->
+          <input id="toggler" type="checkbox" name="toggler" class="toggler" hidden>
+          <label for="toggler" class="burger-icon burger-icon_open">
+            <i class="fa fa-bars"></i>
+          </label>
+          <!-- Menu -->
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="#">Home pages</a></li>
+              <li class="menu__item"><a class="menu__link" href="singlePost.html">Single post</a></li>
+              <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">About us</a></li>
+            </ul>
 
-            <div class="icons navigation__icons">
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="navigation__social-icon">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </div>
+            <label for="toggler" class="burger-icon burger-icon_close" hidden>
+              <i class="fa fa-close"></i>
+            </label>
+          </nav>
+          <!-- Header icons -->
+          <div class="icons navigation__icons">
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="navigation__social-icon">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
         
       </div>
@@ -64,7 +74,7 @@
         <div class="article-card__about">
             <h1 class="article-card__caption">Lorem Ipsum is simply dummy text of the printing </h1>
             <div class="stick"></div>
-            <p class="article-card__author">Good Shoes For Men, Blue and Brown combination</p>
+            <p class="article-card__author">Good Shoes For Men</p>
           </div>
       </a>
       <a href='#' class="article-card">
@@ -105,11 +115,13 @@
                     Being Atraveler in The World, Just Like A lion Without Beard
                   </a>
                 </h1>
-                <div class="post-card__info post-info">
-                  <span class="selected-text">Posted on</span>  August 17, 2017 -
-                  <span class="selected-text">by</span>
-                  <a href="#" class="post-info__author-img">
-                    <img src="assets/img/avatar1.jpeg" alt="avatar">
+                <div class="post-card__info post-info post-info_column">
+                  <span class="post-info__date">
+                      <span class="selected-text">Posted on</span>  August 17, 2017 -
+                      <span class="selected-text">by</span>
+                  </span>
+                  <a href="#" class="post-info__author-info">
+                    <img class='post-info__author-img' src="assets/img/avatar1.jpeg" alt="avatar">
                     <span>Cool Man</span>
                   </a>
                 </div>
@@ -125,7 +137,7 @@
                   <a href="#" class="icons__item"><i class="fa fa-pinterest"></i></a>
                 </div>
             </article>
-
+            <!-- Post card -->
             <article class="post-card">
               <a href="singlePost.html" class="post-card__img">
                 <img src="assets/img/post2.jpeg" alt="post image">
@@ -136,11 +148,13 @@
                     Being Atraveler in The World, Just Like A lion Without Beard
                   </a>
                 </h1>
-                <div class="post-card__info post-info">
-                  <span class="selected-text">Posted on</span>  August 17, 2017 -
-                  <span class="selected-text">by</span>
-                  <a href="#" class="post-info__author-img">
-                    <img src="assets/img/avatar1.jpeg" alt="avatar">
+                <div class="post-card__info post-info post-info_column">
+                  <span class="post-info__date">
+                      <span class="selected-text">Posted on</span>  August 17, 2017 -
+                      <span class="selected-text">by</span>
+                  </span>
+                  <a href="#" class="post-info__author-info">
+                    <img class='post-info__author-img' src="assets/img/avatar1.jpeg" alt="avatar">
                     <span>Cool Man</span>
                   </a>
                 </div>
@@ -156,7 +170,7 @@
                   <a href="#" class="icons__item"><i class="fa fa-pinterest"></i></a>
                 </div>
             </article>
-
+            <!-- Post card -->
             <article class="post-card">
               <a href="singlePost.html" class="post-card__img">
                 <img src="assets/img/post3.jpeg" alt="post image">
@@ -167,11 +181,13 @@
                     Being Atraveler in The World, Just Like A lion Without Beard
                   </a>
                 </h1>
-                <div class="post-card__info post-info">
-                  <span class="selected-text">Posted on</span>  August 17, 2017 -
-                  <span class="selected-text">by</span>
-                  <a href="#" class="post-info__author-img">
-                    <img src="assets/img/avatar1.jpeg" alt="avatar">
+                <div class="post-card__info post-info post-info_column">
+                  <span class="post-info__date">
+                      <span class="selected-text">Posted on</span>  August 17, 2017 -
+                      <span class="selected-text">by</span>
+                  </span>
+                  <a href="#" class="post-info__author-info">
+                    <img class='post-info__author-img' src="assets/img/avatar1.jpeg" alt="avatar">
                     <span>Cool Man</span>
                   </a>
                 </div>
@@ -198,11 +214,13 @@
                     Being Atraveler in The World, Just Like A lion Without Beard
                   </a>
                 </h1>
-                <div class="post-card__info post-info">
-                  <span class="selected-text">Posted on</span>  August 17, 2017 -
-                  <span class="selected-text">by</span>
-                  <a href="#" class="post-info__author-img">
-                    <img src="assets/img/avatar1.jpeg" alt="avatar">
+                <div class="post-card__info post-info post-info_column">
+                  <span class="post-info__date">
+                      <span class="selected-text">Posted on</span>  August 17, 2017 -
+                      <span class="selected-text">by</span>
+                  </span>
+                  <a href="#" class="post-info__author-info">
+                    <img class='post-info__author-img' src="assets/img/avatar1.jpeg" alt="avatar">
                     <span>Cool Man</span>
                   </a>
                 </div>
@@ -229,11 +247,13 @@
                     Being Atraveler in The World, Just Like A lion Without Beard
                   </a>
                 </h1>
-                <div class="post-card__info post-info">
-                  <span class="selected-text">Posted on</span>  August 17, 2017 -
-                  <span class="selected-text">by</span>
-                  <a href="#" class="post-info__author-img">
-                    <img src="assets/img/avatar1.jpeg" alt="avatar">
+                <div class="post-card__info post-info post-info_column">
+                  <span class="post-info__date">
+                      <span class="selected-text">Posted on</span>  August 17, 2017 -
+                      <span class="selected-text">by</span>
+                  </span>
+                  <a href="#" class="post-info__author-info">
+                    <img class='post-info__author-img' src="assets/img/avatar1.jpeg" alt="avatar">
                     <span>Cool Man</span>
                   </a>
                 </div>
@@ -295,7 +315,9 @@
                       <a href='singlePost.html'>Being Atraveler in The World, Just Like A lion Without Beard</a>
                     </h1>
                     <p class="posts-item__info post-info">
-                      <span class="selected-text">Posted on</span> August 17, 2017
+                      <span class="post-info__date">
+                        <span class="selected-text">Posted on</span>  August 17, 2017
+                      </span>
                     </p>
                   </div>
                 </li>
@@ -309,7 +331,9 @@
                       <a href='singlePost.html'>Lorem Ipsum Dolor Sit met. Just a Dummy text for Content</a>
                     </h1>
                     <p class="posts-item__info post-info">
-                      <span class="selected-text">Posted on</span> August 17, 2017
+                        <span class="post-info__date">
+                          <span class="selected-text">Posted on</span>  August 17, 2017
+                        </span>
                     </p>
                   </div>
                 </li>
@@ -323,7 +347,9 @@
                       <a href='singlePost.html'>Just a Dummy text for Content, Lorem Ipsum</a>
                     </h1>
                     <p class="posts-item__info post-info">
-                      <span class="selected-text">Posted on</span> August 17, 2017
+                      <span class="post-info__date">
+                        <span class="selected-text">Posted on</span>  August 17, 2017
+                      </span>
                     </p>
                   </div>
                 </li>

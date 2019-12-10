@@ -68,6 +68,14 @@ module.exports = {
           name: '[name].[ext]'
         },
         exclude: '/node_modules/'
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        },
+        exclude: '/node_modules/'
       }
     ]
   },
@@ -96,7 +104,8 @@ module.exports = {
       filename: 'about.html'
     }),
     new CopyWebpackPlugin([
-      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` }
+      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+      { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` }
     ])
   ]
 }
