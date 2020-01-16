@@ -4,13 +4,13 @@
 @import "fonts";
 @import "icons";
 @import "animations";
-@import "./modules/header.scss";
-@import "./modules/footer.scss";
+/* @import "./modules/header.scss";
+@import './modules/sidebar.scss';
 @import "./modules/articles.scss";
 @import './modules/singlePost.scss';
 @import './modules/contact.scss';
 @import './modules/about.scss';
-@import './modules/sidebar.scss';
+@import "./modules/footer.scss"; */
 
 *,
 *:before,
@@ -40,6 +40,15 @@ ul, li {
 
 html {
   font-size: $mainFontSize;
+  @include smDesktop {
+    font-size: 17px;
+  }
+  @include tablet {
+    font-size: 16px;
+  }
+  @include phone {
+    font-size: 15px;
+  }
 }
 
 body {
@@ -55,6 +64,8 @@ a {
   display: inline-block;
 }
 
+// General classes
+
 .selected-text {
   color: $active-color;
 }
@@ -63,6 +74,10 @@ a {
   width: 100%;
   display: grid;
   grid-template-columns: $content-container;
+
+  @media screen and (max-width: $desktopWidth) {
+    grid-template-columns: $responsive-content-container
+  }
 }
 
 .caption {
@@ -76,5 +91,72 @@ a {
   text-transform: uppercase;
 }
 
+.description {
+  color: $medium-text-color;
+    font-size: rem(14);
+}
 
-@import "media"
+.nick {
+  @include font($caption-font, rem(18));
+  color: $dark-text-color;
+  font-weight: 700;
+
+  a {
+    color: $dark-text-color;
+  }
+}
+
+.icons {
+  display: flex;
+  // font-size: rem(18);
+  font-size: 18px;
+
+  &__item {
+    margin-right: rem(20);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  
+  &__link_rounded {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include size(40px);
+    border-radius: 50%;
+    background-color: $bg-color-primary;
+    color: $dark-text-color;
+    transition: all .3s ease;
+
+    &:hover{
+      background-color: $active-color;
+      color: $light-text-color;
+    }
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+}
+
+.post-title {
+  font-family: $caption-font;
+  font-weight: 500;
+  // line-height: 1.6rem;
+  color: $dark-text-color;
+
+  a {
+    color: $dark-text-color;
+  }
+}
+
+// @import "media";
+@import "./modules/header.scss";
+@import './modules/sidebar.scss';
+@import "./modules/articles.scss";
+@import './modules/singlePost.scss';
+@import './modules/contact.scss';
+@import './modules/about.scss';
+@import "./modules/footer.scss";

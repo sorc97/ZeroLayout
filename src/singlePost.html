@@ -1,65 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Single Post</title>
 </head>
+
 <body>
   <!-- Header -->
   <header class="header">
-      <!-- Navigation -->
-      <div class="container navigation__container">
-        <div class="navigation">
-          <!-- Burger icon -->
-          <input id="toggler" type="checkbox" name="toggler" class="toggler" hidden>
-          <label for="toggler" class="burger-icon burger-icon_open">
-            <i class="fa fa-bars"></i>
+    <!-- Navigation -->
+    <div class="container navigation__container">
+      <div class="navigation">
+        <!-- Burger icon -->
+        <input id="toggler" type="checkbox" name="toggler" class="toggler" hidden>
+        <label for="toggler" class="burger-icon burger-icon_open">
+          <i class="fa fa-bars"></i>
+        </label>
+        <!-- Menu -->
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="index.html">Home pages</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Single post</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="about.html">About us</a></li>
+          </ul>
+
+          <label for="toggler" class="burger-icon burger-icon_close" hidden>
+            <i class="fa fa-close"></i>
           </label>
-          <!-- Menu -->
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="index.html">Home pages</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Single post</a></li>
-              <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
-              <li class="menu__item"><a class="menu__link" href="about.html">About us</a></li>
-            </ul>
-
-            <label for="toggler" class="burger-icon burger-icon_close" hidden>
-              <i class="fa fa-close"></i>
-            </label>
-          </nav>
-
-          <div class="icons navigation__icons">
-            <a href="#" class="navigation__social-icon">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
+        </nav>
+        <!-- Header icons -->
+        <ul class="icons navigation__icons">
+          <li class="icons__item">
+            <a href="#" class="icons__link navigation__social-icon">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
-            <a href="#" class="navigation__social-icon">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
+          </li>
+          <li class="icons__item">
+            <a href="#" class="icons__link navigation__social-icon">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="#" class="navigation__social-icon">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
+          </li>
+          <li class="icons__item">
+            <a href="#" class="icons__link navigation__social-icon">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
             </a>
-          </div>
-        </div>
-        
+          </li>
+        </ul>
       </div>
-
-      <div class="logo">
-        <a href="#">
-          <img src="assets/img/logo.png" alt="Zero logo">
-        </a>
-      </div>
+    </div>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="#">
+        <img src="assets/img/logo.png" alt="Zero logo">
+      </a>
+    </div>
   </header>
-
-  <!-- Articles -->
+  <!-- Content -->
   <main class="content">
-    <!-- Popular posts -->
+    <!-- Page caption -->
     <section class="page-caption">
-      <div class="page-caption__title">
+      <h1 class="page-caption__title">
         Single Page
-      </div>
+      </h1>
     </section>
     <!-- Blog -->
     <section class='blog'>
@@ -67,22 +73,20 @@
         <div class="blog__inner">
           <!-- Single post -->
           <section class="feed">
-            <article class="single-post">
-              <a href="#" class="single-post__img">
+            <article class="post-card">
+              <div href="#" class="post-card__img">
                 <img src="assets/img/post1.jpeg" alt="post img">
-              </a>
+              </div>
 
-              <div class="single-post__body">
-                <h1 class="single-post__title post-title">
-                  <a href="#">
-                    Being Atraveler in The World, Just Like A lion Without Beard
-                  </a>
-                </h1>
+              <div class="post-card__body single-post">
+                <h2 class="single-post__title post-title">
+                  Being Atraveler in The World, Just Like A lion Without Beard
+                </h2>
 
-                <div class="single-post__info post-info post-info_column">
+                <div class="single-post__info post-info">
                   <span class="post-info__date">
-                      <span class="selected-text">Posted on</span>  August 17, 2017 -
-                      <span class="selected-text">by</span>
+                    <span class="selected-text">Posted on</span> August 17, 2017 -
+                    <span class="selected-text">by</span>
                   </span>
                   <a href="#" class="post-info__author-info">
                     <img class='post-info__author-img' src="assets/img/avatar1.jpeg" alt="avatar">
@@ -92,76 +96,143 @@
 
                 <div class="single-post__article-text article-text">
                   <p class="article-text__paragraph">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
+                    professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                    consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
+                    literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+                    of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
+                    book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of
+                    Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
                   </p>
                   <p class="article-text__paragraph">
-                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                    Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in
+                    their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
                   </p>
                   <blockquote class="quote article-text__quote">
                     <!-- <div class="quote-stick"></div> -->
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical Latin literature from 45 BC, making it over 2000 years old.
                   </blockquote>
                   <p class="article-text__paragraph">
-                      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                    born and I will give you a complete account of the system, and expound the actual teachings of the
+                    great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or
+                    avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue
+                    pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who
+                    loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally
+                    circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial
+                    example, which of us ever undertakes laborious physical exercise, except to obtain some advantage
+                    from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no
+                    annoying consequences, or one who avoids a pain that produces no resultant pleasure?
                   </p>
                   <p class="article-text__paragraph">
-                    "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                    "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                    deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                    provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+                    fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+                    est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
+                    voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
+                    aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+                    recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+                    maiores alias consequatur aut perferendis doloribus asperiores repellat."
                   </p>
-                  <h2 class="article-text__caption">
+                  <h3 class="article-text__caption">
                     1914 translation by H. Rackham
-                  </h2>
+                  </h3>
                   <p class="article-text__paragraph">
-                    "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."The standard Lorem Ipsum passage, used since the 1500s
+                    "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and
+                    demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee
+                    the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their
+                    duty through weakness of will, which is the same as saying through shrinking from toil and pain.
+                    These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice
+                    is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is
+                    to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty
+                    or the obligations of business it will frequently occur that pleasures have to be repudiated and
+                    annoyances accepted. The wise man therefore always holds in these matters to this principle of
+                    selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid
+                    worse pains."The standard Lorem Ipsum passage, used since the 1500s
                   </p>
-                  <h2 class="article-text__caption">
+                  <h3 class="article-text__caption">
                     Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-                  </h2>
+                  </h3>
                   <p class="article-text__paragraph">
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum."
                   </p>
-                  <p class="article-text__paragraph">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-                  <p class="article-text__paragraph"></p>
+                  <p class="article-text__paragraph">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                    quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                    nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                    velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                    voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                    laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
+                    ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                    voluptas nulla pariatur?"</p>
                 </div>
               </div>
 
-              <div class="icons single-post__icons">
-                <a href="#" class="icons__item"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="icons__item"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="icons__item"><i class="fa fa-whatsapp"></i></a>
-                <a href="#" class="icons__item"><i class="fa fa-instagram"></i></a>
-                <a href="#" class="icons__item"><i class="fa fa-pinterest"></i></a>
-              </div>
+              <ul class="icons post-card__icons">
+                <li class="icons__item">
+                  <a href="#" class="icons__link icons__link_rounded">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="icons__item">
+                  <a href="#" class="icons__link icons__link_rounded">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="icons__item">
+                  <a href="#" class="icons__link icons__link_rounded">
+                    <i class="fa fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="icons__item">
+                  <a href="#" class="icons__link icons__link_rounded">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="icons__item">
+                  <a href="#" class="icons__link icons__link_rounded">
+                    <i class="fa fa-pinterest"></i>
+                  </a>
+                </li>
+              </ul>
             </article>
             <!-- Author -->
-            <div class="author">
-              <h1 class="caption author__caption">
+            <div class="author blog-section">
+              <h2 class="caption author__caption">
                 Author
-              </h1>
-
+              </h2>
               <div class="author__img">
                 <img src="assets/img/avatar1.jpeg" alt="author image">
               </div>
-              
               <div class="author__about">
-                <h3 class="author__nick">Cool Man</h3>
-                <p class="author__description">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                <h3 class="author__nick nick">Cool Man</h3>
+                <p class="author__description description">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                  totam rem aperiam, eaque ipsa quae ab illo inventore
                 </p>
               </div>
             </div>
-
             <!-- Comments -->
-            <div class="comments">
-              <h1 class="caption commnets__caption">
-                Comments      
-              </h1>
+            <div class="comments blog-section">
+              <h2 class="caption commnets__caption">
+                Comments
+              </h2>
               <ul class="comments__list">
                 <li class="comments__item comments-item">
                   <a href="#" class="comments-item__img">
                     <img src="assets/img/avatar2.jpeg" alt="avatar">
                   </a>
                   <div class="comments-item__info">
-                    <h3 class="comments-item__nick">
+                    <h3 class="comments-item__nick nick">
                       <a href='#'>Beard</a>
                     </h3>
                     <span class="comments-item__date">
@@ -174,7 +245,9 @@
 
                   </div>
                   <p class="comments-item__comment-text">
-                    Just a simple com is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and ment for you!
+                    Just a simple com is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    of type and ment for you!
                   </p>
                   <!-- Subcomments -->
                   <ul class="comments__list_subcomments">
@@ -183,44 +256,48 @@
                         <img src="assets/img/ig2.jpeg" alt="avatar">
                       </a>
                       <div class="comments-item__info">
-                        <h3 class="comments-item__nick">
+                        <h3 class="comments-item__nick nick">
                           <a href='#'>Looner</a>
                         </h3>
                         <span class="comments-item__date">
                           - August 17, 2017
                         </span>
-    
+
                         <a href="#" class="comments-item__reply">
                           REPLY <i class="fa fa-reply" aria-hidden="true"></i>
                         </a>
-    
+
                       </div>
                       <p class="comments-item__comment-text">
-                        Just a simple com is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and ment for you!
+                        Just a simple com is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley of type and ment for you!
                       </p>
                     </li>
 
                     <li class="comments__item_subcomment comments-item">
-                        <a href="#" class="comments-item__img">
-                          <img src="assets/img/ig4.jpeg" alt="avatar">
+                      <a href="#" class="comments-item__img">
+                        <img src="assets/img/ig4.jpeg" alt="avatar">
+                      </a>
+                      <div class="comments-item__info">
+                        <h3 class="comments-item__nick nick">
+                          <a href='#'>Dark00</a>
+                        </h3>
+                        <span class="comments-item__date">
+                          - August 17, 2017
+                        </span>
+
+                        <a href="#" class="comments-item__reply">
+                          REPLY <i class="fa fa-reply" aria-hidden="true"></i>
                         </a>
-                        <div class="comments-item__info">
-                          <h3 class="comments-item__nick">
-                            <a href='#'>Dark00</a>
-                          </h3>
-                          <span class="comments-item__date">
-                            - August 17, 2017
-                          </span>
-      
-                          <a href="#" class="comments-item__reply">
-                            REPLY <i class="fa fa-reply" aria-hidden="true"></i>
-                          </a>
-      
-                        </div>
-                        <p class="comments-item__comment-text">
-                          Just a simple com is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and ment for you!
-                        </p>
-                      </li>
+
+                      </div>
+                      <p class="comments-item__comment-text">
+                        Just a simple com is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley of type and ment for you!
+                      </p>
+                    </li>
                   </ul>
                 </li>
 
@@ -229,7 +306,7 @@
                     <img src="assets/img/ig2.jpeg" alt="avatar">
                   </a>
                   <div class="comments-item__info">
-                    <h3 class="comments-item__nick">
+                    <h3 class="comments-item__nick nick">
                       <a href='#'>Looner</a>
                     </h3>
                     <span class="comments-item__date">
@@ -242,17 +319,18 @@
 
                   </div>
                   <p class="comments-item__comment-text">
-                    Just a simple com is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and ment for you!
+                    Just a simple com is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    of type and ment for you!
                   </p>
                 </li>
               </ul>
 
               <!-- Comments form -->
               <div class="leave-comment">
-                <h1 class="leave-comment__title post-title">
+                <h2 class="leave-comment__title post-title">
                   Leave a comment
-                </h1>
-
+                </h2>
                 <form class="leave-comment__form message-form">
                   <input type="text" name="name" class="message-form__name" placeholder="Name">
                   <input type="email" name="email" class="message-form__email" placeholder="Your email">
@@ -261,65 +339,68 @@
                 </form>
               </div>
             </div>
-
-            <div class="related-posts">
-              <h1 class="related-posts__caption caption">Related posts</h1>
+            <!-- Related posts -->
+            <div class="related-posts blog-section">
+              <h2 class="related-posts__caption caption">Related posts</h2>
               <a href="#" class="related-posts__item related-item">
-                <img src="assets/img/post3.jpeg" alt="post image" class="related-item__img">
-                <h2 class="related-item__title post-title">
-                  It is a long established fact that a reader will be distracted 
-                </h2>
+                <div class="related-item__img">
+                  <img src="assets/img/post3.jpeg" alt="post image">
+                </div>
+                <h3 class="related-item__title post-title">
+                  It is a long established fact that a reader will be distracted
+                </h3>
               </a>
               <a href="#" class="related-posts__item related-item">
-                <img src="assets/img/post2.jpeg" alt="post image" class="related-item__img">
-                <h2 class="related-item__title post-title">
+                <div class="related-item__img">
+                  <img src="assets/img/post2.jpeg" alt="post image">
+                </div>
+                <h3 class="related-item__title post-title">
                   Making it look like readable English
-                </h2>
+                </h3>
               </a>
             </div>
-            
           </section>
-
+          <!-- Sidebar -->
           <aside class="sidebar">
-            <div class="about">
-              <h1 class="caption">
+            <div class="about sidebar__item">
+              <h2 class="caption">
                 About me
-              </h1>
+              </h2>
               <div class="about__img">
                 <img src="assets/img/about1.jpeg" alt="about img">
               </div>
               <p class="about__description">
-                  Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source
+                Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+                undoubtable source
               </p>
             </div>
-
-            <div class="subscribe">
-              <h1 class="caption subscribe-form__caption">
+            <!-- Subscription -->
+            <div class="subscribe sidebar__item">
+              <h2 class="caption subscribe-form__caption">
                 Subscribe
-              </h1>
-  
+              </h2>
               <form class="subscribe__form">
-                <label>Subscribe to Our newsletter for free Update  every week</label>
+                <label>Subscribe to Our newsletter for free Update every week</label>
                 <input class="subscribe__email-field" type="email" placeholder="Your email" name="email">
                 <button class="subscribe__button">subscribe</button>
               </form>
             </div>
-
-            <div class="popular-posts">
-              <h1 class="caption">Popular Posts</h1>
-              
+            <!-- Popular posts -->
+            <div class="popular-posts sidebar__item">
+              <h2 class="caption">Popular Posts</h2>
+              <!-- Posts list -->
               <ul class="popular-posts__list">
                 <li class="popular-posts__item posts-item">
                   <a href="singlePost.html" class="posts-item__img">
                     <img src="assets/img/post1.jpeg" alt="popular post img">
                   </a>
                   <div class="posts-item__about">
-                    <h1 class="posts-item__title post-title">
+                    <h3 class="posts-item__title post-title">
                       <a href='singlePost.html'>Being Atraveler in The World, Just Like A lion Without Beard</a>
-                    </h1>
+                    </h3>
                     <p class="posts-item__info post-info">
                       <span class="post-info__date">
-                        <span class="selected-text">Posted on</span>  August 17, 2017
+                        <span class="selected-text">Posted on</span> August 17, 2017
                       </span>
                     </p>
                   </div>
@@ -330,12 +411,12 @@
                     <img src="assets/img/post2.jpeg" alt="popular post img">
                   </a>
                   <div class="posts-item__about">
-                    <h1 class="posts-item__title post-title">
+                    <h3 class="posts-item__title post-title">
                       <a href='singlePost.html'>Lorem Ipsum Dolor Sit met. Just a Dummy text for Content</a>
-                    </h1>
+                    </h3>
                     <p class="posts-item__info post-info">
                       <span class="post-info__date">
-                        <span class="selected-text">Posted on</span>  August 17, 2017
+                        <span class="selected-text">Posted on</span> August 17, 2017
                       </span>
                     </p>
                   </div>
@@ -344,45 +425,59 @@
                 <li class="popular-posts__item posts-item">
                   <a href="singlePost.html" class="posts-item__img">
                     <img src="assets/img/post3.jpeg" alt="popular post img">
+                    <!-- <img src="https://avatars3.githubusercontent.com/u/22837136?s=460&v=4" alt="popular post img"> -->
                   </a>
                   <div class="posts-item__about">
-                    <h1 class="posts-item__title post-title">
+                    <h3 class="posts-item__title post-title">
                       <a href='singlePost.html'>Just a Dummy text for Content, Lorem Ipsum</a>
-                    </h1>
+                    </h3>
                     <p class="posts-item__info post-info">
                       <span class="post-info__date">
-                        <span class="selected-text">Posted on</span>  August 17, 2017
+                        <span class="selected-text">Posted on</span> August 17, 2017
                       </span>
                     </p>
                   </div>
                 </li>
               </ul>
             </div>
-
-            <div class="category">
-              <h1 class="caption">Category</h1>
-              
+            <!-- Categories -->
+            <div class="category sidebar__item">
+              <h2 class="caption">Category</h2>
               <ul class="category__list">
                 <li class="category__item">
-                  <a href="#"><i class="fa fa-arrow-right category__icon"></i>Beard</a>
+                  <a href="#" class="category__link">
+                    <i class="fa fa-arrow-right category__icon"></i>Beard
+                  </a>
                 </li>
                 <li class="category__item">
-                  <a href="#"><i class="fa fa-arrow-right category__icon"></i>Travel</a>
+                  <a href="#" class="category__link">
+                    <i class="fa fa-arrow-right category__icon"></i>Travel
+                  </a>
                 </li>
                 <li class="category__item">
-                  <a href="#"><i class="fa fa-arrow-right category__icon"></i>Sun Rise</a>
+                  <a href="#" class="category__link">
+                    <i class="fa fa-arrow-right category__icon"></i>Sun Rise
+                  </a>
                 </li>
                 <li class="category__item">
-                  <a href="#"><i class="fa fa-arrow-right category__icon"></i>Village</a>
+                  <a href="#" class="category__link">
+                    <i class="fa fa-arrow-right category__icon"></i>Village
+                  </a>
                 </li>
                 <li class="category__item">
-                  <a href="#"><i class="fa fa-arrow-right category__icon"></i>Night Fall</a>
+                  <a href="#" class="category__link">
+                    <i class="fa fa-arrow-right category__icon"></i>Night Fall
+                  </a>
                 </li>
                 <li class="category__item">
-                  <a href="#"><i class="fa fa-arrow-right category__icon"></i>City</a>
+                  <a href="#" class="category__link">
+                    <i class="fa fa-arrow-right category__icon"></i>City
+                  </a>
                 </li>
                 <li class="category__item">
-                  <a href="#"><i class="fa fa-arrow-right category__icon"></i>Local food</a>
+                  <a href="#" class="category__link">
+                    <i class="fa fa-arrow-right category__icon"></i>Local food
+                  </a>
                 </li>
               </ul>
             </div>
@@ -393,7 +488,7 @@
   </main>
 
   <footer class="footer">
-    <h1 class="footer__caption">Follow my instagramm @my_instagramm</h1>
+    <h4 class="footer__caption">Follow my instagramm @my_instagramm</h4>
 
     <div class="galery footer__galery">
       <div class="galery__image">
@@ -405,49 +500,71 @@
       <div class="galery__image">
         <img src="assets/img/ig2.jpeg" alt="ig photo">
         <div class="galery__overlay">
-            <a class="galery__link" href="#">Open on instagramm</a>
-          </div>
+          <a class="galery__link" href="#">Open on instagramm</a>
+        </div>
       </div>
       <div class="galery__image">
         <img src="assets/img/ig3.jpeg" alt="ig photo">
         <div class="galery__overlay">
-            <a class="galery__link" href="#">Open on instagramm</a>
-          </div>
+          <a class="galery__link" href="#">Open on instagramm</a>
+        </div>
       </div>
       <div class="galery__image">
         <img src="assets/img/ig4.jpeg" alt="ig photo">
         <div class="galery__overlay">
-            <a class="galery__link" href="#">Open on instagramm</a>
-          </div>
+          <a class="galery__link" href="#">Open on instagramm</a>
+        </div>
       </div>
       <div class="galery__image">
         <img src="assets/img/ig5.jpeg" alt="ig photo">
         <div class="galery__overlay">
-            <a class="galery__link" href="#">Open on instagramm</a>
-          </div>
+          <a class="galery__link" href="#">Open on instagramm</a>
+        </div>
       </div>
       <div class="galery__image">
         <img src="assets/img/ig6.jpeg" alt="ig photo">
         <div class="galery__overlay">
-            <a class="galery__link" href="#">Open on instagramm</a>
-          </div>
+          <a class="galery__link" href="#">Open on instagramm</a>
+        </div>
       </div>
     </div>
 
-    <div class="icons footer__icons">
-      <a href="#" class="icons__item"><i class="fa fa-facebook"></i></a>
-      <a href="#" class="icons__item"><i class="fa fa-twitter"></i></a>
-      <a href="#" class="icons__item"><i class="fa fa-whatsapp"></i></a>
-      <a href="#" class="icons__item"><i class="fa fa-instagram"></i></a>
-      <a href="#" class="icons__item"><i class="fa fa-pinterest"></i></a>
-    </div>
+    <!-- Footer Icons -->
+    <ul class="icons footer__icons">
+      <li class="icons__item">
+        <a href="#" class="icons__link icons__link_rounded">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </li>
+      <li class="icons__item">
+        <a href="#" class="icons__link icons__link_rounded">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li class="icons__item">
+        <a href="#" class="icons__link icons__link_rounded">
+          <i class="fa fa-whatsapp"></i>
+        </a>
+      </li>
+      <li class="icons__item">
+        <a href="#" class="icons__link icons__link_rounded">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </li>
+      <li class="icons__item">
+        <a href="#" class="icons__link icons__link_rounded">
+          <i class="fa fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
 
     <div class="copyright">
-        <p>zero KM Copyright © 2018 - 
-          <strong class="copyright__link">https://www.behance.net/dwi_mboj</strong>
-        </p>
+      <p>zero KM Copyright © 2018 -
+        <strong class="copyright__link">https://www.behance.net/dwi_mboj</strong>
+      </p>
     </div>
   </footer>
-  
+
 </body>
+
 </html>

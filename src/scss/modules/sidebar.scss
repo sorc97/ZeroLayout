@@ -5,15 +5,37 @@
   display: grid;
   row-gap: 30px;
   height: auto;
+  min-width: 270px;
+
+  &__item {
+    display: grid;
+    background-color: $light-bg-color;
+    padding: $sidebar-padding;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, 48%);
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-template-areas:
+        'about posts'
+        'subscribe posts'
+        'category posts';
+  }
+
+  @include phone{
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas:
+        "about"
+        "subscribe"
+        "category"
+        "posts";
+  }
 }
 
 .about {
   text-align: center;
-  display: grid;
-  background-color: $light-bg-color;
   row-gap: 25px;
-  // grid-template-columns: [caption] 1fr [img] 4fr [description] 2fr;
-  padding: $sidebar-padding;
 
   &__img {
     width: 100%;
@@ -31,10 +53,8 @@
 
 .subscribe {
   background-color: $active-color;
-  display: grid;
-  row-gap: 20px;
-  padding: $sidebar-padding;
   color: $light-text-color;
+  row-gap: 20px;
   font-size: rem(14px);
 
   &__form {
@@ -43,8 +63,9 @@
   }
 
   &__email-field {
-    @include font($regular-font , 16px);
+    @include font($regular-font , rem(16));
     padding: 10px;
+    width: 100%;
   }
 
   &__button {
@@ -58,10 +79,7 @@
 }
 
 .popular-posts {
-  display: grid;
-  padding: $sidebar-padding;
   row-gap: 25px;
-  background-color: $light-bg-color;
 
   &__list {
     display: grid;
@@ -81,9 +99,13 @@
 
   &__img {
     width: 100%;
+    align-self: baseline;
+    max-height: 200px;
 
     img {
       width: inherit;
+      @include size(100%);
+      object-fit: cover;
     }
   }
 
@@ -92,30 +114,30 @@
   }
 
   @media screen and (max-width: $desktopWidth) {
-    grid-template-rows: 2fr 1fr;
     row-gap: 10px;
     grid-template-columns: 1fr;
+
+    &__img {
+      height: 100%;
+    }
   }
 }
 
 .category {
-  display: grid;
-  background-color: $light-bg-color;
-  padding: $sidebar-padding;
   row-gap: 15px;
-
+  
   &__item {
     font-size: rem(14);
+  }
 
-    a {
-      width: 100%;
-      color: $active-color;
-      font-style: italic;
-      padding: 10px 0px;
+  &__link {
+    width: 100%;
+    color: $active-color;
+    font-style: italic;
+    padding: 10px 0px;
 
-      &:hover .category__icon {
-        transform: translateX(10px); 
-      }
+    &:hover .category__icon {
+      transform: translateX(10px); 
     }
   }
 
@@ -124,4 +146,28 @@
     margin-right: 20px;
     transition: all .3s ease;
   }
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .about {
+    grid-area: about;  
+  }
+
+  .subscribe {
+    grid-area: subscribe;
+  }
+
+  .popular-posts {
+    grid-area: posts;
+  }
+
+  .category {
+    grid-area: category;
+  }
+
+  .popular-posts {
+    &__item {
+      grid-template-rows: 1fr auto;
+    }
+  }  
 }

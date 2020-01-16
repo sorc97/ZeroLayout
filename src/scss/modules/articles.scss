@@ -1,3 +1,4 @@
+// CLOTHES
 
 .content {
   grid-row: content;
@@ -6,75 +7,94 @@
 .clothes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
 
-.article-card {
-  display: grid;
-  grid-template-rows: [img] 3fr [about] 1fr;
-  color: $dark-text-color;
-
-  &:hover &__about { 
-    background-color: $active-color;
-    color: $light-text-color;
-    
-    .stick {
-      background-color: $light-text-color;
-    }
-
-    &::before {
-      background-color: $active-color;
-    }
-  }
-
-  &__img {
-    display: block;
-    @include size(100%, 410px);
-
-    img {
-      @include size(100%);
-      object-fit: cover;
-    }
-  }
-
-  &__about {
-    position: relative;
-    background-color: $light-bg-color;
+  &-card {
     display: grid;
-    justify-content: center;
-    align-content: space-evenly;
-    text-align: center;
-    border-right: 1px solid #e3e3e3;
-    transition: all .3s ease;
-
-    &:last-child{
-      border-right: none;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: -7px;
-      left: calc(50% - 7px);
-      @include size(15px, 15px);
-      background-color: $light-bg-color;
-      transform: rotate(45deg);
-      transition: all .3s ease;
-    }
-  }
-
-  &__caption {
-    @include font($caption-font, rem(18));
-
-    &::before {
-      content: '';
-      @include size(125px, 2px);
+    grid-template-rows: [img] 3fr [about] 1fr;
+    color: $dark-text-color;
+  
+    &:hover &__about { 
       background-color: $active-color;
+      color: $light-text-color;
+      
+      .stick {
+        background-color: $light-text-color;
+      }
+
+      &::before {
+        background-color: $active-color;
+      }
+    }
+  
+    &__img {
+      @include size(100%, 410px);
+  
+      img {
+        @include size(100%);
+        object-fit: cover;
+      }
+
+      @include smDesktop {
+        height: auto;
+      }
+
+      @include tablet {
+        height: 250px;
+      }
+
+      @include phone {
+        height: 200px;
+      }
+    }
+  
+    &__about {
+      position: relative;
+      background-color: $light-bg-color;
+      display: grid;
+      align-content: space-evenly;
+      text-align: center;
+      border-right: 1px solid #e3e3e3;
+      transition: all .3s ease;
+      padding: 0px .5rem;
+  
+      &:last-child{
+        border-right: none;
+      }
+      // Triangle
+      &::before {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: calc(50% - 7px);
+        @include size(15px, 15px);
+        background-color: $light-bg-color;
+        transform: rotate(45deg);
+        transition: all .3s ease;
+      }
+    }
+  
+    &__caption {
+      @include font($caption-font, rem(18));
+  
+      &::before {
+        content: '';
+        @include size(125px, 2px);
+        background-color: $active-color;
+      }
+    }
+  
+    &__author {
+      font-size: rem(14);
+      font-style: italic;
     }
   }
 
-  &__author {
-    font-size: rem(14);
-    font-style: italic;
+  @include tablet {
+    grid-template-columns: repeat(2, auto);
+
+    &-card {
+      grid-template-rows: [img] 2fr [about] 1.2fr;
+    }
   }
 }
 
@@ -95,40 +115,60 @@
     align-items: start;
     column-gap: 30px;
     padding: 30px 0px;
-  }
 
-  &__navigation {
-    font-size: 14px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
+    @include tablet {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
+  }
+}
+
+.post-navigation {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  
+  &__link {
+    color: $dark-text-color;
+    padding: 15px 0px;
+    transition: all .3s ease;
     
-    a {
-      color: $dark-text-color;
-      padding: 15px 0px;
-      transition: all .3s ease;
-      
-      &:hover{
-        color: $active-color;
-      }
+    &:hover{
+      color: $active-color;
     }
   }
 }
 
 .feed {
-  // background-color: coral;
-  // height: 100px;
   display: grid;
-  grid-template-rows: repeat(auto-fill, auto);
   grid-gap: 25px;
+
+  &-post {
+    display: grid;
+    @include alignElements(center);
+    row-gap: 20px;
+
+    &__title {
+      font-size: rem(24);
+      text-align: center;
+      line-height: 1.6rem;
+    }
+  
+    &__description {
+      text-align: center;
+      font-family: $regular-font;
+    }
+
+    &__info {
+      justify-content: center;
+    }
+  }
 }
 
 .post-info {
-  // display: grid;
-  // grid-template-areas: 'date user';
-  // align-items: center;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -143,7 +183,6 @@
     @include size(40px);
     object-fit: cover;
     border-radius: 50%;
-    // margin: 0px 10px;
     margin: 10px 5px;
   }
 }
@@ -151,57 +190,35 @@
 .post-card {
   background-color: $light-bg-color;
   display: grid;
+  grid-template-rows: 500px auto 100px;
   @include font($regular-font, rem(14));
 
   &__img {
-    width: 100%;
+    @include size(100%);
 
     img {
       width: inherit;
+      height: inherit;
+      object-fit: cover;
     }
   }
 
-  &__about {
-    display: grid;
-    @include alignElements(center);
-    padding: 5% 3% 7% 3%;
-    row-gap: 20px;
-  }
-
-  &__title {
-    font-size: rem(24);
-    text-align: center;
-  }
-
-  &__description {
-    text-align: center;
-    // padding: 0px 30px;
-    // line-height: 1.3rem;
-    font-family: $regular-font;
+  &__body {
+    padding: 5% 4% 7%;
   }
 
   &__icons {
     justify-content: center;
     align-items: center;
-    @include size(100%, 100px);
+    @include size(100%);
     border-top: 1px dashed $post-border-color;
   }
 
-  &__info {
+  @include smDesktop {
+    grid-template-rows: 350px auto 100px;
+  }
 
+  @include phone {
+    grid-template-rows: 250px auto 65px;
   }
 }
-
-.post-title {
-  font-family: $caption-font;
-  font-weight: 500;
-  line-height: 1.6rem;
-
-  a {
-    color: $dark-text-color;
-  }
-}
-
-// SIDEBAR
-
-

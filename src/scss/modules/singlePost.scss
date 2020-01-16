@@ -5,7 +5,6 @@
   @include alignElements(center);
 
   &__title {
-    display: block;
     border-bottom: 3px solid $active-color;
     padding: 20px;
     color: $light-text-color;
@@ -15,37 +14,18 @@
 }
 
 .single-post {
-  background-color: $light-bg-color;
-  
-  &__body {
-    padding: 4%;
-  }
-
   &__title {
     font-size: 24px;
-  }
-
-  &__img {
-    width: 100%;
-
-    img {
-      width: inherit;
-    }
+    line-height: 2rem;
   }
 
   &__info {
-    padding: 1.4rem 0;
+    padding: rem(20) 0;
   }
 
   &__article-text {
     font-size: 14px;
-  }
-
-  &__icons {
-    height: 90px;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px dashed $post-border-color;
+    line-height: 1.5rem;
   }
 }
 
@@ -56,6 +36,15 @@
     &:first-child {
       margin: 0;
     }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__caption {
+    @include font($caption-font, 20px);    
+    font-weight: 500;
   }
 
   &__quote {
@@ -74,62 +63,64 @@
       height: 4px;
       background-color: $active-color;
     }
-  }
+  }  
+}
 
-  &__caption {
-    @include font($caption-font, rem(20));
-    font-weight: 500;
-  }
+.blog-section {
+  display: grid;
+  background-color: $light-bg-color;
+  padding: $feed-padding;
 }
 
 .author {
-  background-color: $light-bg-color;
-  display: grid;
   grid-template-areas: 'caption caption' 'img about';
-  // grid-template-areas: 'caption caption' 'img img' 'about about';
-  // justify-items: center;
   gap: 25px;
-  padding: $feed-padding;
 
   &__caption {
     grid-area: caption;
-    max-width: 100px;
   }
 
   &__img {
     grid-area: img;
+
+    @include phone {
+      width: 30%;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   &__about {
     grid-area: about;
     align-self: center;
+
+    @include phone {
+      text-align: center;
+    }
   }
 
-  &__nick {
-    @include font($caption-font, rem(16));
-    font-weight: 700;
+  @include phone {
+    grid-template-areas: 'caption caption' 'img img' 'about about';
+    justify-items: center;
   }
-
-  &__description {
-    color: $medium-text-color;
-    font-size: rem(14);
-  }
-
 }
 
 .comments {
-  display: grid;
-  background-color: $light-bg-color;
-  padding: $feed-padding;
-
   &__item {
     border-bottom: 1px dashed $post-border-color;
-    padding: 40px 0px;
+    padding: 2rem 0px;
   }
 
   &__list_subcomments {
     grid-row: subcomments;
     grid-column: about;
+
+    @include phone {
+      grid-column: span 2;
+      margin-left: 20px;
+    }
   }
 
   &__item_subcomment {
@@ -142,13 +133,13 @@
   display: grid;
   grid-template-columns: [img] minmax(25px, 12%) [about] 1fr;
   grid-template-rows: [info] auto [comment] 1fr [subcomments] auto;
-  // gap: 10px 20px;
   gap: 10px 5%;
 
   &__img {
     grid-column: img;
     grid-row: span 2;
     width: 100%;
+    align-self: baseline;
 
     img{
       width: inherit;
@@ -163,13 +154,7 @@
 
   &__nick {
     display: inline-block;
-    @include font($caption-font, rem(18));
-    font-weight: 500;
     margin-right: 5px;
-
-    a {
-      color: $dark-text-color;
-    }
   }
 
   &__date {
@@ -205,9 +190,18 @@
 
   &__form {
     min-height: 200px;
-    grid-template-areas: 'name comment'
-                        'email comment' 
-                        'submit comment';
+    grid-template-areas: 
+      'name comment'
+      'email comment' 
+      'submit comment';
+
+    @include tablet {
+      grid-template-areas: 
+        "name" 
+        "email"  
+        "comment" 
+        "submit";
+    }
   }
 }
 
@@ -254,13 +248,20 @@
     grid-area: phone;
     padding: 0px 10px;
   }
+
+  @include tablet {
+    * {
+      padding: 15px;
+    }
+
+    &__btn {
+      padding: 20px;
+    }
+  }
 }
 
 .related-posts {
-  display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: $light-bg-color;
-  padding: $feed-padding;
   gap: 30px 25px;
 
   &__caption {
@@ -273,10 +274,16 @@
 
   &__img {
     width: 100%;
+
+    img {
+      @include size(100%);
+      max-height: 200px;
+      object-fit: cover;
+    }
   }
 
   &__title {
-    margin-top: 20px;
+    margin-top: rem(20);
     color: $dark-text-color;
   }
 }

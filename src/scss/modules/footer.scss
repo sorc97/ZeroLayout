@@ -8,7 +8,6 @@
   @include alignElements(center);
 
   &__galery {
-    // padding: 0px 30px;
     padding: 0px 5%;
   }
 
@@ -19,6 +18,16 @@
   &__icons {
     a {
       margin-right: 20px;
+    }
+  }
+
+  @include desktop {
+    grid-template-rows: [caption] 1fr [galery] 4fr [icons] 1fr [copyright] 70px;
+  }
+
+  @include tablet {
+    &__galery {
+      padding: 0px;
     }
   }
 } 
@@ -76,32 +85,19 @@
       opacity: 1;
     }
   }
-}
 
-.icons {
-  display: flex;
-  font-size: rem(18);
+  @include desktop {
+    grid-template-columns: repeat(3, 200px);
+    row-gap: 20px;
+  } 
+
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(150px, 30%));
+    gap: 10px;
+  }
   
-  &__item {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include size(40px);
-    border-radius: 50%;
-    background-color: $bg-color-primary;
-    color: $dark-text-color;
-    margin-right: 4%;
-    transition: all .3s ease;
-
-    &:hover{
-      background-color: $active-color;
-      color: $light-text-color;
-    }
-
-    &:last-child {
-      margin-right: 0px;
-    }
+  @include phone {
+    grid-template-columns: repeat(2, minmax(100px, 40%));
   }
 }
 

@@ -11,6 +11,11 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: minmax(200px, 290px);
     background-color: $light-bg-color;
+
+    @include smDesktop {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 200px);
+    }
   }
 
   &__map {
@@ -20,6 +25,7 @@
 
     img {
       width: 100%;
+      min-height: 300px;
       object-fit: cover;
     }
   }
@@ -57,6 +63,18 @@
       font-size: rem(36);
     }
   }
+
+  @include smDesktop {
+    grid-template-columns: auto 1fr;
+    border: none;
+    grid-gap: 10%;
+  }
+
+  @include phone {
+    &__icon {
+      @include size(70px);
+    }
+  }
 }
 
 .feedback {
@@ -75,5 +93,14 @@
                         'phone comment' 
                         'submit comment';
     margin-bottom: 40px;
+
+    @include tablet {
+      grid-template-areas: 
+        "name" 
+        "email"  
+        "phone" 
+        "comment" 
+        "submit";
+    }
   }
 }

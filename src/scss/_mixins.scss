@@ -31,3 +31,34 @@
   align-self: $y;
   justify-self: $x;
 }
+// Media queries
+@mixin media($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media screen and (max-width: #{$desktopWidth}) {
+    @content;
+  }
+}
+
+@mixin smDesktop{
+  @media screen and (max-width: #{$smDesktopWidth}) {
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media screen and (max-width: #{$tabletWidth}) {
+    @content;
+  }
+}
+
+@mixin phone{
+  @media screen and (max-width: #{$phoneWidth}) {
+    @content;
+  }
+}
+
