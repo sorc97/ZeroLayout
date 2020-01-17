@@ -26,6 +26,7 @@ $dark-text-color: #000;
 $light-text-color: #fff;
 $medium-text-color: #9a9a9a;
 $active-color: #fb7c56;
+$active-hover-color: #f76b41;
 $post-border-color: #d4d4d4;
 $descriptions-color: #707070;
 $input-border-color: #bdc3c7;
@@ -36,6 +37,8 @@ $responsive-content-container: [left-gutter] 3% [content] auto [right-gutter] 3%
 
 //Indents
 $sidebar-padding: 1.5rem;
-// $feed-padding: 5%;
-$feed-padding: 5% 4%;
+// $feed-padding: 5% 4%;
+$feed-padding: 2rem 1.5rem;
 $section-padding: 1.2rem;
+$post-card-padding: 5% 4% 7%;
+// $post-card-padding: 2rem 1.5rem 2.5rem;

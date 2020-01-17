@@ -4,13 +4,6 @@
 @import "fonts";
 @import "icons";
 @import "animations";
-/* @import "./modules/header.scss";
-@import './modules/sidebar.scss';
-@import "./modules/articles.scss";
-@import './modules/singlePost.scss';
-@import './modules/contact.scss';
-@import './modules/about.scss';
-@import "./modules/footer.scss"; */
 
 *,
 *:before,
@@ -96,6 +89,17 @@ a {
     font-size: rem(14);
 }
 
+.post-title {
+  font-family: $caption-font;
+  font-weight: 500;
+  // line-height: 1.6rem;
+  color: $dark-text-color;
+
+  a {
+    color: $dark-text-color;
+  }
+}
+
 .nick {
   @include font($caption-font, rem(18));
   color: $dark-text-color;
@@ -141,15 +145,10 @@ a {
   }
 }
 
-.post-title {
-  font-family: $caption-font;
-  font-weight: 500;
-  // line-height: 1.6rem;
-  color: $dark-text-color;
-
-  a {
-    color: $dark-text-color;
-  }
+.blog-section {
+  display: grid;
+  background-color: $light-bg-color;
+  padding: $feed-padding;
 }
 
 // @import "media";

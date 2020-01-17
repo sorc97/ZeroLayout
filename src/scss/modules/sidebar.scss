@@ -6,6 +6,11 @@
   row-gap: 30px;
   height: auto;
   min-width: 270px;
+  grid-template-areas:
+        "about"
+        "subscribe"
+        "category"
+        "posts";
 
   &__item {
     display: grid;
@@ -36,6 +41,7 @@
 .about {
   text-align: center;
   row-gap: 25px;
+  grid-area: about;
 
   &__img {
     width: 100%;
@@ -56,6 +62,7 @@
   color: $light-text-color;
   row-gap: 20px;
   font-size: rem(14px);
+  grid-area: subscribe;
 
   &__form {
     display: grid;
@@ -80,10 +87,17 @@
 
 .popular-posts {
   row-gap: 25px;
+  grid-area: posts;
 
   &__list {
     display: grid;
     row-gap: 20px;
+  }
+
+  @include tablet {
+    &__item {
+      grid-template-rows: 1fr auto;
+    }
   }
 }
 
@@ -113,7 +127,7 @@
     font-size: rem(18);
   }
 
-  @media screen and (max-width: $desktopWidth) {
+  @include desktop {
     row-gap: 10px;
     grid-template-columns: 1fr;
 
@@ -125,6 +139,7 @@
 
 .category {
   row-gap: 15px;
+  grid-area: category;
   
   &__item {
     font-size: rem(14);
@@ -146,28 +161,4 @@
     margin-right: 20px;
     transition: all .3s ease;
   }
-}
-
-@media screen and (max-width: $tabletWidth) {
-  .about {
-    grid-area: about;  
-  }
-
-  .subscribe {
-    grid-area: subscribe;
-  }
-
-  .popular-posts {
-    grid-area: posts;
-  }
-
-  .category {
-    grid-area: category;
-  }
-
-  .popular-posts {
-    &__item {
-      grid-template-rows: 1fr auto;
-    }
-  }  
 }

@@ -7,10 +7,9 @@
   }
 
   &__info {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: minmax(200px, 290px);
-    background-color: $light-bg-color;
+    padding: 0px;
 
     @include smDesktop {
       grid-template-columns: 1fr;
@@ -32,14 +31,12 @@
 }
 
 .contact-card {
-  height: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto 1fr;
   column-gap: 20px;
   align-items: center;
-  @include font($caption-font, rem(16));
-  font-weight: 700;
+  height: 100%;
   border-right: 1px solid $bg-color-secondary;
   padding: $section-padding;
 
@@ -50,6 +47,12 @@
   &__caption {
     grid-column: span 2;
     align-self: center;
+  }
+
+  &__text {
+    @include font($caption-font, rem(16));
+    line-height: 1.6rem;
+    font-weight: 700;
   }
 
   &__icon {
@@ -78,21 +81,17 @@
 }
 
 .feedback {
-  background-color: $light-bg-color;
-  padding: $section-padding;
-  display: grid;
   grid-template-columns: minmax(auto, 700px);
-  // grid-template-rows: auto 270px;
   justify-content: center;
   row-gap: 35px;
 
   &__form {
     min-height: 270px;
-    grid-template-areas: 'name comment'
-                        'email comment' 
-                        'phone comment' 
-                        'submit comment';
-    margin-bottom: 40px;
+    grid-template-areas: 
+      'name comment'
+      'email comment' 
+      'phone comment' 
+      'submit comment';
 
     @include tablet {
       grid-template-areas: 
