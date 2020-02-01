@@ -9,12 +9,21 @@ const PATHS = {
   assets: 'assets/'
 }
 
+let htmlFiles = ['singlePost', 'contact', 'about', 'index'];
+// Формирование плагина для каждого html файла
+let htmlPlugin = htmlFiles.map(
+  file => new HtmlWebpackPlugin({
+    template: `${PATHS.src}/${file}.html`,
+    filename: `${file}.html`
+  })
+)
+
 module.exports = {
-//Внешние пер-ые
+  //Внешние пер-ые
   externals: {
     paths: PATHS
   },
-  
+
   entry: {
     app: PATHS.src
   },
@@ -36,14 +45,17 @@ module.exports = {
           },
           {
             loader: 'postcss-loader',
-            options: { sourceMap: true, config: { path: './postcss.config.js' } }
+            options: {
+              sourceMap: true,
+              config: { path: './postcss.config.js' }
+            }
           },
           {
             loader: 'sass-loader',
             options: { sourceMap: true }
           }
         ],
-        exclude: '/node_modules/'
+        exclude: /node_modules/
       },
       {
         test: /\.css$/i,
@@ -59,7 +71,7 @@ module.exports = {
             options: { sourceMap: true, config: { path: './postcss.config.js' } }
           },
         ],
-        exclude: '/node_modules/'
+        exclude: /node_modules/
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -67,7 +79,7 @@ module.exports = {
         options: {
           name: '[name].[ext]'
         },
-        exclude: '/node_modules/'
+        exclude: /node_modules/
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -75,7 +87,7 @@ module.exports = {
         options: {
           name: '[name].[ext]'
         },
-        exclude: '/node_modules/'
+        exclude: /node_modules/
       }
     ]
   },
@@ -83,26 +95,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/style.css`
     }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/index.html`,
-      filename: './index.html'
-    }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/singlePost.html`,
-      filename: 'singlePost.html'
-    }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/contact.html`,
-      filename: 'contact.html'
-    }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/about.html`,
-      filename: 'about.html'
-    }),
+    ...htmlPlugin,
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` }

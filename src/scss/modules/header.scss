@@ -14,6 +14,10 @@
     &:last-child {
       margin-right: 0px;
     }
+
+    &_active {
+      border-bottom: 2px solid #fb7c56;
+    }
   }
 
   &__link {
@@ -31,8 +35,8 @@
     height: 100%;
     z-index: 10;
     overflow-x: hidden;
-    transition: all .3s ease;
     background-color: #252525e0;
+    animation: fadeIn .3s ease;
 
     &__list {
       display: flex;
@@ -55,7 +59,7 @@
         content: '';
         position: absolute;
         left: 0px;
-        bottom: 0px;
+        bottom: -2px;
         background-color: #fff;
         @include size(0px, 3px);
         transition: all .2s ease;

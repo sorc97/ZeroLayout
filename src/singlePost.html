@@ -22,10 +22,18 @@
         <!-- Menu -->
         <nav class="menu">
           <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" href="index.html">Home pages</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Single post</a></li>
-            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
-            <li class="menu__item"><a class="menu__link" href="about.html">About us</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Home pages</a>
+            </li>
+            <li class="menu__item menu__item_active">
+              <a class="menu__link" href="#">Single post</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="contact.html">Contact</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="about.html">About us</a>
+            </li>
           </ul>
 
           <label for="toggler" class="burger-icon burger-icon_close" hidden>
@@ -61,20 +69,19 @@
   </header>
   <!-- Content -->
   <main class="content">
-    <!-- Page caption -->
-    <section class="page-caption">
-      <h1 class="page-caption__title">
-        Single Page
-      </h1>
-    </section>
     <!-- Blog -->
     <section class='blog'>
+      <div class="page-caption">
+        <h1 class="page-caption__title">
+          Single Page
+        </h1>
+      </div>
       <div class="container blog__container">
         <div class="blog__inner">
           <!-- Single post -->
-          <section class="feed">
+          <div class="feed">
             <article class="post-card">
-              <div href="#" class="post-card__img">
+              <div class="post-card__img">
                 <img src="assets/img/post1.jpeg" alt="post img">
               </div>
 
@@ -325,7 +332,6 @@
                   </p>
                 </li>
               </ul>
-
               <!-- Comments form -->
               <div class="leave-comment">
                 <h2 class="leave-comment__title post-title">
@@ -359,7 +365,7 @@
                 </h3>
               </a>
             </div>
-          </section>
+          </div>
           <!-- Sidebar -->
           <aside class="sidebar">
             <div class="about sidebar__item">
@@ -486,9 +492,10 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <h4 class="footer__caption">Follow my instagramm @my_instagramm</h4>
-
+    <!-- Galery -->
     <div class="galery footer__galery">
       <div class="galery__image">
         <img src="assets/img/ig1.jpeg" alt="ig photo">
@@ -527,8 +534,7 @@
         </div>
       </div>
     </div>
-
-    <!-- Footer Icons -->
+    <!-- Icons -->
     <ul class="icons footer__icons">
       <li class="icons__item">
         <a href="#" class="icons__link icons__link_rounded">
@@ -556,14 +562,13 @@
         </a>
       </li>
     </ul>
-
+    <!-- Copyright -->
     <div class="copyright">
       <p>zero KM Copyright © 2018 -
         <strong class="copyright__link">https://www.behance.net/dwi_mboj</strong>
       </p>
     </div>
   </footer>
-
 </body>
 
 </html>

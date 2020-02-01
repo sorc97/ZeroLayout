@@ -219,6 +219,10 @@
     padding: 0px 10px;
   }
 
+  &__name:focus, &__email:focus, &__comment:focus {
+    outline: 2px solid $active-color;
+  }
+
   &__btn {
     grid-area: submit;
     @include font($caption-font, rem(14px));
@@ -230,7 +234,7 @@
     border-radius: 5px;
     transition: background-color .2s ease;
 
-    &:hover {
+    &:hover, &:focus {
       background-color: $active-hover-color;
     }
   }

@@ -22,10 +22,18 @@
         <!-- Menu -->
         <nav class="menu">
           <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" href="index.html">Home pages</a></li>
-            <li class="menu__item"><a class="menu__link" href="singlePost.html">Single post</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-            <li class="menu__item"><a class="menu__link" href="about.html">About us</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Home pages</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="singlePost.html">Single post</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__item_active" href="#">Contact</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="about.html">About us</a>
+            </li>
           </ul>
 
           <label for="toggler" class="burger-icon burger-icon_close" hidden>
@@ -52,56 +60,50 @@
         </ul>
       </div>
     </div>
-
+    <!-- Logo -->
     <div class="logo">
       <a href="#">
         <img src="assets/img/logo.png" alt="Zero logo">
       </a>
     </div>
   </header>
-
   <!-- Content -->
   <main class="content">
-    <!-- Page Caption -->
-    <section class="page-caption">
-      <div class="page-caption__title">
-        Contact Us
-      </div>
-    </section>
-    <!-- Contact -->
+    <!-- Contacts -->
     <section class='contact'>
+      <div class="page-caption">
+        <h1 class="page-caption__title">
+          Contact Us
+        </h1>
+      </div>
       <div class="container contact__container">
         <div class="contact__inner">
           <!-- Contact info -->
-          <div class="contact__info">
+          <div class="contact__info blog-section">
             <div class="contact-card">
-              <h1 class="caption contact-card__caption">Address</h1>
+              <h2 class="caption contact-card__caption">Address</h2>
               <div class="contact-card__icon"><i class='fa fa-home'></i></div>
               <h3 class="contact-card__text">4102 Ferguson Street, Hopkinton Massachusetts, 01748 USA</h3>
             </div>
             <div class="contact-card">
-              <h1 class="caption contact-card__caption">Phone</h1>
-              <div class="contact-card__icon"><i class='fa fa-home'></i></div>
+              <h2 class="caption contact-card__caption">Phone</h2>
+              <div class="contact-card__icon"><i class='fa fa-phone'></i></div>
               <h3 class="contact-card__text">+62 813 2871 0504 <br> +62 813 2871 0504</h3>
             </div>
             <div class="contact-card">
-              <h1 class="caption contact-card__caption">Email</h1>
-              <div class="contact-card__icon"><i class='fa fa-home'></i></div>
+              <h2 class="caption contact-card__caption">Email</h2>
+              <div class="contact-card__icon"><i class='fa fa-envelope'></i></div>
               <h3 class="contact-card__text">dwidrg@gmail.com</h3>
             </div>
           </div>
 
           <div class="contact__map">
-            <!-- <div class="contact__map-img"> -->
             <img src="assets/img/map.jpeg" alt="map image">
-            <!-- </div> -->
           </div>
-
-          <div class="contact__feedback feedback">
-            <h1 class="feedback__caption caption">
+          <div class="contact__feedback feedback blog-section">
+            <h2 class="feedback__caption caption">
               Send us a message
-            </h1>
-
+            </h2>
             <form class="feedback__form message-form">
               <input type="text" name="name" class="message-form__name" placeholder="Name">
               <input type="email" name="email" class="message-form__email" placeholder="Your email">
@@ -113,13 +115,11 @@
         </div>
       </div>
     </section>
-
-
   </main>
-
+  <!-- Footer -->
   <footer class="footer">
     <h4 class="footer__caption">Follow my instagramm @my_instagramm</h4>
-
+    <!-- Galery -->
     <div class="galery footer__galery">
       <div class="galery__image">
         <img src="assets/img/ig1.jpeg" alt="ig photo">
@@ -158,7 +158,7 @@
         </div>
       </div>
     </div>
-    <!-- Footer Icons -->
+    <!-- Icons -->
     <ul class="icons footer__icons">
       <li class="icons__item">
         <a href="#" class="icons__link icons__link_rounded">
@@ -193,7 +193,6 @@
       </p>
     </div>
   </footer>
-
 <script type="text/javascript" src="/assets/js/app.bundle.js"></script></body>
 
 </html>
