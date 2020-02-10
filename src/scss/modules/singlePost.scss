@@ -1,6 +1,6 @@
 .page-caption {
   height: 250px;
-  background: url('/assets/img/background.jpeg') no-repeat center /cover;
+  background: url('../../img/background.jpeg') no-repeat center /cover;
   display: grid;
   @include alignElements(center);
 

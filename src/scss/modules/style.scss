@@ -1,9 +1,9 @@
-@import "reset";
-@import "vars";
-@import "mixins";
-@import "fonts";
-@import "icons";
-@import "animations";
+@import "../reset";
+@import "../vars";
+@import "../mixins";
+@import "../fonts";
+@import "../icons";
+@import "../animations";
 
 *,
 *:before,
@@ -135,10 +135,10 @@ a {
 }
 
 // Modules
-@import "./modules/header.scss";
-@import './modules/sidebar.scss';
-@import "./modules/articles.scss";
-@import './modules/singlePost.scss';
-@import './modules/contact.scss';
-@import './modules/about.scss';
-@import "./modules/footer.scss";
+@import "./header.scss";
+@import './sidebar.scss';
+@import "./articles.scss";
+@import './singlePost.scss';
+@import './contact.scss';
+@import './about.scss';
+@import "./footer.scss";
