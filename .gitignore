@@ -1,2 +1,6 @@
 # dependency
 node_modules
+
+
+# production
+/dist
